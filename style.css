@@ -22,6 +22,26 @@
     --radius-xl: 24px;
 }
 
+/* Remove blue highlight on buttons, links, and interactive elements */
+button:focus,
+a:focus,
+.btn:focus,
+.btn-primary:focus,
+.btn-outline:focus,
+.service-link:focus,
+.contact-action-btn:focus,
+.viewServices-more-btn:focus,
+.learn-more-btn:focus,
+.google-review-btn:focus,
+.navbar a:focus,
+.mobile-menu-btn:focus,
+input:focus,
+textarea:focus {
+    outline: none !important;
+    box-shadow: none !important;
+    -webkit-tap-highlight-color: transparent !important;
+}
+
 
 
 /* Reset & Base */
@@ -29,6 +49,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+     -webkit-tap-highlight-color: transparent;
 }
 
 html {
@@ -299,7 +320,7 @@ ul {
 
 .hero h1 {
     font-size: 52px;
-    font-weight: 800;
+    font-weight: 900;
     line-height: 1.15;
     margin-bottom: 20px;
     color: var(--white);
@@ -779,7 +800,7 @@ ul {
 }
 @media (max-width: 768px) {
     .service-card::before {
-        opacity: 0.5;  /* Faint but visible on mobile */
+        opacity: 0.8;  /* Faint but visible on mobile */
         height: 35%;   /* Slightly taller on mobile */
     }
     

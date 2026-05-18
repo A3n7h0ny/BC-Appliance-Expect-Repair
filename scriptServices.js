@@ -1,4 +1,11 @@
 // ========================================
+// BS Appliance Repair — scriptServices.js
+// ========================================
+const navbar       = document.getElementById('navbar');
+const navLinks     = document.getElementById('navLinks');
+const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+
+// ========================================
 // Navbar Scroll Effect
 // ========================================
 

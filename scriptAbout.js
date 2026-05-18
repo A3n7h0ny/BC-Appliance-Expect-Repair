@@ -1,3 +1,10 @@
+// ========================================
+// BS Appliance Repair — scriptAbout.js
+// ========================================
+const navbar       = document.getElementById('navbar');
+const navLinks     = document.getElementById('navLinks');
+const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+
  // === SCROLL ANIMATIONS ===
         const fadeElements = document.querySelectorAll('.fade-in');
         
@@ -340,6 +347,10 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         {
             src: 'images/1777228297645.png',
             caption: 'We are prepared to come to you'
+        },
+        {
+            src: 'images/about-technician.jpg',
+            caption: 'Prior Inspection'
         },
         
     ];

@@ -1,0 +1,5 @@
+# Netlify redirect — forces non-www to www (canonical domain)
+https://bsapplianceexpectrepairs.co.za/* https://www.bsapplianceexpectrepairs.co.za/:splat 301!
+
+# Also redirect bare index.html to root (optional but clean)
+/index.html / 301

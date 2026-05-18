@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://www.bsapplianceexpectrepairs.co.za/sitemap.xml

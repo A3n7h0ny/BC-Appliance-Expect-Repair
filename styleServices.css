@@ -18,11 +18,32 @@
     --radius-xl: 24px;
 }
 
+/* Remove blue highlight on buttons, links, and interactive elements */
+button:focus,
+a:focus,
+.btn:focus,
+.btn-primary:focus,
+.btn-outline:focus,
+.service-link:focus,
+.contact-action-btn:focus,
+.viewServices-more-btn:focus,
+.learn-more-btn:focus,
+.google-review-btn:focus,
+.navbar a:focus,
+.mobile-menu-btn:focus,
+input:focus,
+textarea:focus {
+    outline: none !important;
+    box-shadow: none !important;
+    -webkit-tap-highlight-color: transparent !important;
+}
+
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+     -webkit-tap-highlight-color: transparent;
 }
 
 html {
@@ -284,9 +305,9 @@ section {
         .quick-jump-carousel {
     position: sticky;
     top: 70px;
-    background: var(--white);
-    padding: 12px 0;
-    border-bottom: 1px solid #eef2f6;
+    background:linear-gradient(90deg, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.95),rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.082)) ;
+    backdrop-filter:  blur(10px);
+    padding: 1px 0;
     display: flex;
     align-items: center;
     gap: 10px;
@@ -298,7 +319,25 @@ section {
     overflow-x: auto;
     scroll-behavior: smooth;
     scrollbar-width: thin;
+    scrollbar-color: rgba(24, 24, 24, 0.479) #ffffffb2; /* thumb, track - Firefox */
 }
+
+/* WebKit scrollbar styling */
+.carousel-container::-webkit-scrollbar {
+    height: 6px; /* Height of horizontal scrollbar */
+}
+
+.carousel-container::-webkit-scrollbar-track {
+    background: #e2e8f0; /* Light gray track - CHANGE THIS COLOR */
+    border-radius: 10px;
+}
+
+.carousel-container::-webkit-scrollbar-thumb {
+    background: var(--lightish-gray); /* Dark blue thumb */
+    border-radius: 10px;
+}
+
+
 
 .carousel-links {
     display: flex;
@@ -309,8 +348,10 @@ section {
 .carousel-links a {
     flex-shrink: 0;
     padding: 8px 20px;
-    background: var(--light-gray);
+    background: rgba(24, 24, 24, 0.356);
     border-radius: 40px;
+    border: 0.1px solid white;
+    color: white;
     font-size: 13px;
     font-weight: 500;
     white-space: nowrap;
@@ -320,13 +361,14 @@ section {
     width: 32px;
     height: 32px;
     border-radius: 50%;
-    background: var(--navy);
+    background: var(--gray);
     color: white;
     border: none;
     cursor: pointer;
     font-size: 18px;
     font-weight: bold;
 }
+
 
 @media (max-width: 768px) {
     .carousel-nav {
@@ -376,7 +418,7 @@ section {
     background: linear-gradient(135deg, #ef4444, #dc2626);
 }
         /* ========================================
-           ALTERNATING SERVICE ROWS (OPTION B)
+           ALTERNATING SERVICE ROWS 
            ======================================== */
         .service-row {
             padding: 60px 0;
@@ -389,11 +431,11 @@ section {
         }
 
         .service-row:nth-child(even) {
-            background-color: var(--light-gray);
+            background-color: var(--white);
         }
 
         .service-row:nth-child(odd) {
-            background-color: var(--white);
+            background-color: var(--light-dark);
         }
 
         .service-alternating {
@@ -424,6 +466,7 @@ section {
             transition: transform 0.3s ease;
             display: block;
         }
+        
 
         .service-image:hover img {
             transform: scale(1.03);
@@ -438,19 +481,31 @@ section {
             justify-content: center;
             margin-bottom: 24px;
         }
-
-        .service-info h2 {
+        .service-alternating .service-info h2{
+            color: var(--dark);
             font-size: 32px;
             font-weight: 700;
             margin-bottom: 16px;
-            color: var(--dark);
+        }
+
+        .service-alternating.reverse .service-info h2 {
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 16px;
+            color: var(--white);
+        }
+        .service-alternating.reverse .service-description {
+             color: var(--lightish-gray);
+            font-size: 16px;
+            line-height: 1.7;
+            margin-bottom: 20px;
         }
 
         .service-info h2 .highlight {
             color: var(--accent);
         }
 
-        .service-description {
+        .service-alternating .service-description {
             color: var(--gray);
             font-size: 16px;
             line-height: 1.7;
@@ -485,7 +540,17 @@ section {
             margin: 20px 0;
         }
 
-        .brand-badge {
+        .service-alternating.reverse .brand-badge {
+            background: var(--primary-dark);
+            padding: 6px 14px;
+            border-radius: 30px;
+            font-size: 12px;
+            font-weight: 500;
+            color: var(--primary-light);
+
+        }
+
+        .service-alternating .brand-badge {
             background: var(--primary-light);
             padding: 6px 14px;
             border-radius: 30px;
@@ -494,11 +559,25 @@ section {
             color: var(--primary);
         }
 
-        .service-btn {
+        .service-alternating.reverse .service-btn {
+             display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--navy);
+            color: white;
+            padding: 12px 28px;
+            border-radius: 50px;
+            font-weight: 600;
+            margin-top: 20px;
+            transition: var(--transition);
+            text-decoration: none;
+        }
+
+        .service-alternating .service-btn {
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            background: var(--primary);
+            background: var(--primary-dark);
             color: white;
             padding: 12px 28px;
             border-radius: 50px;
@@ -637,9 +716,9 @@ section {
             position: fixed;
             bottom: 30px;
             left: 30px;
-            width: 45px;
-            height: 45px;
-            background: var(--primary);
+            width: 40px;
+            height: 40px;
+            background: var(--navy);
             color: white;
             border-radius: 50%;
             display: flex;
