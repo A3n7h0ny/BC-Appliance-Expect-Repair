@@ -336,22 +336,16 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
 
             const slideshowData = [
-        {
-            src: 'images/Repair man.jpg',
-            caption: 'Expert technicians repairing appliances across Joburg & Pretoria'
-        },
+        
         {
             src: 'images/fixing.jpeg',
-            caption: 'Professional commercial appliance repair services'
+            caption: 'Expert technicians repairing appliances across Joburg & Pretoria'
         },
         {
             src: 'images/1777228297645.png',
             caption: 'We are prepared to come to you'
         },
-        {
-            src: 'images/about-technician.jpg',
-            caption: 'Prior Inspection'
-        },
+       
         
     ];
     

@@ -38,8 +38,6 @@ textarea:focus {
     -webkit-tap-highlight-color: transparent !important;
 }
 
-
-
 * {
     margin: 0;
     padding: 0;
@@ -263,10 +261,7 @@ ul {
             text-decoration: none;
             color: inherit;
         }
-
-        
-
-        
+   
 
         .section-title {
             text-align: center;
@@ -466,58 +461,139 @@ ul {
             opacity: 0.9;
         }
 
-        /* === WHY CHOOSE US === */
-        .why-choose {
-            background-color: var(--light);
-        }
+        /* === WHY CHOOSE US — Full Background Images === */
+.why-choose {
+    background-color: var(--light-gray);
+    position: relative;
+}
 
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
 
-        .feature-card {
-            background-color: var(--white);
-            border-radius: 16px;
-            padding: 30px;
-            box-shadow: var(--shadow);
-            transition: var(--transition);
-            text-align: center;
-            border-bottom: 4px solid var(--secondary);
-        }
+/* Feature Card - With Full Background Image */
+.feature-card {
+    position: relative;
+    border-radius: 20px;
+    padding: 40px 30px;
+    text-align: center;
+    transition: all 0.3s ease;
+    overflow: hidden;
+    min-height: 320px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-bottom: none;
+    box-shadow: var(--shadow);
+}
 
-        .feature-card:hover {
-            transform: translateY(-10px);
-            box-shadow: var(--shadow-hover);
-        }
+/* Dark overlay for readability */
+.feature-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+    transition: background 0.3s ease;
+}
 
-        .feature-icon {
-            width: 70px;
-            height: 70px;
-            background-color: rgba(0, 115, 230, 0.1);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 20px;
-        }
+.feature-card:hover::before {
+    background: rgba(0, 0, 0, 0.8);
+}
 
-        .feature-icon i {
-            font-size: 2rem;
-            color: var(--primary);
-        }
+/* Card content stays above overlay */
+.feature-card .feature-icon,
+.feature-card h3,
+.feature-card p {
+    position: relative;
+    z-index: 2;
+}
 
-        .feature-card h3 {
-            font-size: 1.3rem;
-            margin-bottom: 15px;
-            color: var(--primary);
-        }
+.feature-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-hover);
+}
 
-        .feature-card p {
-            color: var(--text-light);
-            font-size: 0.95rem;
-        }
+/* Individual background images for each feature card */
+.feature-card:nth-child(1) {
+    background-image: url('images/about-technician.jpg');
+}
+.feature-card:nth-child(2) {
+    background-image: url('images/OEM.jpg');
+}
+.feature-card:nth-child(3) {
+    background-image: url('images/istockphoto-2154268652-612x612.jpg');
+}
+.feature-card:nth-child(4) {
+    background-image: url('images/parts.jpg');
+}
+.feature-card:nth-child(5) {
+    background-image: url('images/1777228314218.png');
+}
+.feature-card:nth-child(6) {
+    background-image: url('images/AC-Repair.jpg');
+}
+
+.feature-icon {
+    width: 70px;
+    height: 70px;
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(4px);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    transition: all 0.3s ease;
+}
+
+.feature-card:hover .feature-icon {
+    background-color: var(--accent);
+    transform: scale(1.05);
+}
+
+.feature-icon i {
+    font-size: 2rem;
+    color: white;
+}
+
+.feature-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    color: white;
+    font-weight: 700;
+}
+
+.feature-card p {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+    .features-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .feature-card {
+        padding: 30px 20px;
+        min-height: 280px;
+    }
+    
+    .feature-card h3 {
+        font-size: 1.2rem;
+    }
+}
         /* ===TESTIMONY=== */
         .testimonials {
            background-color: var(--light-gray);  

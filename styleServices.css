@@ -435,7 +435,7 @@ section {
         }
 
         .service-row:nth-child(odd) {
-            background-color: var(--dark);
+            background-color: var(--light-dark);
         }
 
         .service-alternating {
@@ -541,7 +541,7 @@ section {
         }
 
         .service-alternating.reverse .brand-badge {
-            background: var(--primary-dark);
+            background: var(--gray);
             padding: 6px 14px;
             border-radius: 30px;
             font-size: 12px;
@@ -563,7 +563,7 @@ section {
              display: inline-flex;
             align-items: center;
             gap: 8px;
-            background: var(--navy);
+            background: var(--primary-dark);
             color: white;
             padding: 12px 28px;
             border-radius: 50px;
