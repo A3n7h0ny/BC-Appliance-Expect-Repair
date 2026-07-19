@@ -638,29 +638,75 @@ ul {
         display: none;
     }
 }
-    </style>
+    
+/* ===== Services Dropdown Nav ===== */
+.nav-dropdown { position: relative; }
+.nav-dropdown > a.dropdown-trigger { display: flex; align-items: center; gap: 6px; cursor: pointer; }
+.dropdown-caret { transition: transform 0.25s ease; flex-shrink: 0; }
+.nav-dropdown:hover .dropdown-caret,
+.nav-dropdown.open .dropdown-caret { transform: rotate(180deg); }
+.dropdown-menu {
+    position: absolute; top: calc(100% + 18px); left: 50%;
+    transform: translateX(-50%) translateY(8px);
+    background: #fff; border-radius: 14px; box-shadow: 0 20px 45px rgba(0,0,0,0.14);
+    padding: 10px; min-width: 250px; display: grid; gap: 2px;
+    opacity: 0; visibility: hidden; pointer-events: none;
+    transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease;
+    z-index: 500; list-style: none;
+}
+.nav-dropdown:hover .dropdown-menu,
+.nav-dropdown.open .dropdown-menu { opacity: 1; visibility: visible; pointer-events: auto; transform: translateX(-50%) translateY(0); }
+.dropdown-menu li a { display: block; padding: 9px 14px; border-radius: 8px; font-size: 14px; font-weight: 500; white-space: nowrap; color: var(--dark, #1a1a1a); }
+.dropdown-menu li a:hover, .dropdown-menu li a.active { background: rgba(0, 115, 230, 0.08); color: var(--primary, #0073e6); }
+.dropdown-viewall a { border-top: 1px solid rgba(0,0,0,0.08); margin-top: 4px; padding-top: 12px !important; color: var(--primary, #0073e6) !important; font-weight: 600 !important; white-space: normal !important; }
+@media (max-width: 768px) {
+    .dropdown-menu { position: static; transform: none; box-shadow: none; border-radius: 10px; background: rgba(0,0,0,0.03); display: none; opacity: 1; visibility: visible; pointer-events: auto; min-width: 0; margin: 6px 0 4px; padding: 6px; }
+    .nav-dropdown.open .dropdown-menu { display: grid; }
+    .nav-dropdown > a.dropdown-trigger { justify-content: space-between; }
+}
+</style>
 </head>
 <body>
 <!-- Navigation -->
     <nav class="navbar" id="navbar">
         <div class="container">
-            <a href="#" class="logo">
+            <a href="index.html" class="logo">
                 <div class="logo-icon"><img src="images/file_000000009cc071fda1d97ea827c440ec.png" alt="BS Appliance Expect Repair Logo"></div>
-                
             </a>
             <ul class="nav-links" id="navLinks">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#testimonials">Reviews</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li class="nav-dropdown">
+                <a href="services.html" class="dropdown-trigger">Services
+                    <svg class="dropdown-caret" width="10" height="6" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="1 1 5 5 9 1"/></svg>
+                </a>
+                
+                <ul class="dropdown-menu">
+                    <li><a href="fridge-repair.html">Refrigerator Repair Johannesburg</a></li>
+                    <li><a href="fridge-compressor-repair.html">Fridge Compressor Repair Johannesburg</a></li>
+                    <li><a href="washing-machine-repair.html">Washing Machine Repair Johannesburg</a></li>
+                    <li><a href="dishwasher-repair.html">Dishwasher Repair Johannesburg</a></li>
+                    <li><a href="oven-repair.html">Oven Repair Johannesburg</a></li>
+                    <li><a href="stove-repair.html">Stove Repair Johannesburg</a></li>
+                    <li><a href="microwave-repair.html">Microwave Repair Johannesburg</a></li>
+                    <li><a href="tumble-dryer-repair.html">Dryer Repair Johannesburg</a></li>
+                    <li><a href="aircon-repair.html">Air Conditioner Repair Johannesburg</a></li>
+                    <li><a href="commercial-fridge-repair.html">Commercial Fridge Repair Johannesburg</a></li>
+                    <li><a href="commercial-freezer-repair.html">Commercial Freezer Repair Johannesburg</a></li>
+                    <li><a href="appliance-maintenance.html">Appliance Maintenance Johannesburg</a></li>
+                    <li><a href="emergency-appliance-repair.html">Emergency Appliance Repair Johannesburg</a></li>
+                    <li class="dropdown-viewall"><a href="services.html">View All Services →</a></li>
+                </ul>
+            </li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#testimonials">Reviews</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
             </ul>
             <div class="nav-contact">
                 <a href="tel:+27832782604" class="phone-link">
                     <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
                     +27832782604
                 </a>
-                <a href="#contact" class="btn btn-primary">Book Now</a>
+                <a href="index.html#contact" class="btn btn-primary">Book Now</a>
             </div>
             <button class="mobile-menu-btn" id="mobileMenuBtn">
                 <span></span>
@@ -991,7 +1037,7 @@ if (mobileMenuBtn && navLinks) {
     });
     
     // Close menu when clicking a link
-    navLinks.querySelectorAll('a').forEach(link => {
+    navLinks.querySelectorAll('a:not(.dropdown-trigger)').forEach(link => {
         link.addEventListener('click', () => {
             closeMobileMenu();
         });
@@ -1021,6 +1067,16 @@ if (mobileMenuBtn && navLinks) {
     });
 }
 
+
+// ===== Services Dropdown (tap-to-open on mobile) =====
+document.querySelectorAll('.nav-dropdown > a.dropdown-trigger').forEach(function(trigger) {
+    trigger.addEventListener('click', function(e) {
+        if (window.innerWidth <= 768) {
+            e.preventDefault();
+            this.parentElement.classList.toggle('open');
+        }
+    });
+});
 </script>
 
 <script type="application/ld+json">
@@ -1032,7 +1088,7 @@ if (mobileMenuBtn && navLinks) {
   "publisher": {
     "@type": "LocalBusiness",
     "name": "BS Appliance Expect Repair",
-    "telephone": "+27739530688",
+    "telephone": "+27832782604",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "18 Hain Rd, The Hill",

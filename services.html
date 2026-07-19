@@ -17,12 +17,10 @@
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="BS Appliance Expect Repair">
     <meta property="og:locale" content="en_ZA">
-    <!-- Twitter/X Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Appliance Repair Services Johannesburg | BS Appliance Expect Repair">
     <meta name="twitter:description" content="Fridge, washing machine, oven, dishwasher, dryer, AC & commercial appliance repairs in Johannesburg. Same-day service. R350 call-out fee waived on repair.">
     <meta name="twitter:image" content="https://www.bsapplianceexpectrepairs.co.za/images/logoPro2.0.png">
-    <!-- Favicon -->
     <link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96">
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="shortcut icon" href="favicon.ico">
@@ -30,15 +28,11 @@
     <meta name="apple-mobile-web-app-title" content="BS Appliance">
     <link rel="manifest" href="site.webmanifest">
     <meta name="theme-color" content="#ffffff">
-    <!-- Google Font preconnect (ADD above the existing Google Fonts link) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="canonical" href="https://www.bsapplianceexpectrepairs.co.za/services.html">
     <link rel="stylesheet" href="styleServices.css">
-    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    
-
 </head>
 <body>
     <!-- Navigation -->
@@ -46,11 +40,30 @@
         <div class="container">
             <a href="index.html" class="logo">
                 <div class="logo-icon"><img src="images/file_000000009cc071fda1d97ea827c440ec.png" alt="BS Appliance Expect Repair Logo"></div>
-                
             </a>
             <ul class="nav-links" id="navLinks">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="services.html">Services</a></li>
+                <li class="nav-dropdown">
+                <a href="services.html" class="dropdown-trigger">Services
+                    <svg class="dropdown-caret" width="10" height="6" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="1 1 5 5 9 1"/></svg>
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a href="fridge-repair.html">Refrigerator Repair</a></li>
+                    <li><a href="fridge-compressor-repair.html">Fridge Compressor Repair</a></li>
+                    <li><a href="washing-machine-repair.html">Washing Machine Repair</a></li>
+                    <li><a href="dishwasher-repair.html">Dishwasher Repair</a></li>
+                    <li><a href="oven-repair.html">Oven Repair</a></li>
+                    <li><a href="stove-repair.html">Stove Repair</a></li>
+                    <li><a href="microwave-repair.html">Microwave Repair</a></li>
+                    <li><a href="tumble-dryer-repair.html">Dryer Repair</a></li>
+                    <li><a href="aircon-repair.html">Air Conditioner Repair</a></li>
+                    <li><a href="commercial-fridge-repair.html">Commercial Fridge Repair</a></li>
+                    <li><a href="commercial-freezer-repair.html">Commercial Freezer Repair</a></li>
+                    <li><a href="appliance-maintenance.html">Appliance Maintenance</a></li>
+                    <li><a href="emergency-appliance-repair.html">Emergency Appliance Repair</a></li>
+                    <li class="dropdown-viewall"><a href="services.html">View All Services →</a></li>
+                </ul>
+            </li>
                 <li><a href="aboutUs.html">About</a></li>
                 <li><a href="index.html#testimonials">Reviews</a></li>
                 <li><a href="index.html#contact">Contact</a></li>
@@ -60,7 +73,7 @@
                     <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
                     +27832782604
                 </a>
-                <a href="#contact" class="btn btn-primary">Book Now</a>
+                <a href="index.html#contact" class="btn btn-primary">Book Now</a>
             </div>
             <button class="mobile-menu-btn" id="mobileMenuBtn">
                 <span></span>
@@ -74,7 +87,7 @@
     <section class="services-hero">
         <div class="container">
             <h1>Our Appliance Repair Services</h1>
-            <p>Professional, fast, and reliable repairs for all major household appliances. Same-day service available across Johannesburg.</p>
+            <p>Professional, fast, and reliable repairs for all major household appliances. Same-day service available across Johannesburg. Tap a service below for full details, common faults we fix, and brands covered.</p>
         </div>
     </section>
 
@@ -82,469 +95,137 @@
     <button class="carousel-nav prev" id="carouselPrev">‹</button>
     <div class="carousel-container" id="carouselContainer">
         <div class="carousel-links" id="carouselLinks">
-            <a href="#fridge">Fridge</a>
-            <a href="#compressor">Compressor</a>
-            <a href="#washer">Washer</a>
-            <a href="#dishwasher"> Dishwasher</a>
-            <a href="#oven">Oven</a>
-            <a href="#stove">Stove</a>
-            <a href="#microwave">Microwave</a>
-            <a href="#dryer">Dryer</a>
-            <a href="#ac">Air Con</a>
-            <a href="#commercial-fridge">Comm Fridge</a>
-            <a href="#commercial-freezer">Comm Freezer</a>
-            <a href="#maintenance">Maintenance</a>
-            <a href="#emergency">Emergency</a>
+            <a href="fridge-repair.html">Refrigerator Repair</a>
+            <a href="fridge-compressor-repair.html">Fridge Compressor Repair</a>
+            <a href="washing-machine-repair.html">Washing Machine Repair</a>
+            <a href="dishwasher-repair.html">Dishwasher Repair</a>
+            <a href="oven-repair.html">Oven Repair</a>
+            <a href="stove-repair.html">Stove Repair</a>
+            <a href="microwave-repair.html">Microwave Repair</a>
+            <a href="tumble-dryer-repair.html">Dryer Repair</a>
+            <a href="aircon-repair.html">Air Conditioner Repair</a>
+            <a href="commercial-fridge-repair.html">Commercial Fridge Repair</a>
+            <a href="commercial-freezer-repair.html">Commercial Freezer Repair</a>
+            <a href="appliance-maintenance.html">Appliance Maintenance</a>
+            <a href="emergency-appliance-repair.html">Emergency Appliance Repair</a>
         </div>
     </div>
     <button class="carousel-nav next" id="carouselNext">›</button>
 </div>
 
-    <!-- ========================================
-         SERVICE 1: REFRIGERATOR (Image Left, Text Right)
-         ======================================== -->
-    <section class="service-row" id="fridge">
+    <!-- Services Directory -->
+    <section class="service-row">
         <div class="container">
-            <div class="service-alternating">
-                <div class="service-image">
-                    <img src="images/WhatsApp Image 2026-03-17 at 14.43.58.jpeg" alt="Refrigerator Repair Johannesburg" onerror="this.src='https://placehold.co/600x400/0073e6/white?text=Fridge+Repair'">
-                </div>
-                <div class="service-info">
+            <div class="services-grid-hub">
+                <div class="service-card-hub">
                     <div class="service-icon-large blue">
-    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <rect x="2" y="4" width="20" height="16" rx="2"></rect>
-        <line x1="6" y1="8" x2="10" y2="8"></line>
-        <line x1="6" y1="12" x2="18" y2="12"></line>
-        <line x1="6" y1="16" x2="10" y2="16"></line>
-    </svg>
-</div>
-                    <h2>Refrigerator <span class="highlight">Repair</span></h2>
-                    <p class="service-description">Is your fridge not cooling properly? Leaking water? Making strange noises? Our certified technicians diagnose and fix all refrigerator issues quickly and affordably.</p>
-                    <ul class="service-list">
-                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Not cooling / Too cold</li>
-                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Ice maker not working</li>
-                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Water leakage</li>
-                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Compressor & thermostat issues</li>
-                    </ul>
-                    <div class="brand-badges">
-                        <span class="brand-badge">Samsung</span>
-                        <span class="brand-badge">LG</span>
-                        <span class="brand-badge">Bosch</span>
-                        <span class="brand-badge">Defy</span>
-                        <span class="brand-badge">Hisense</span>
+                        <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"></rect><line x1="6" y1="8" x2="10" y2="8"></line><line x1="6" y1="12" x2="18" y2="12"></line><line x1="6" y1="16" x2="10" y2="16"></line></svg>
                     </div>
-                    <a href="index.html#contact" class="service-btn">Book Fridge Repair →</a>
+                    <h3>Refrigerator Repair</h3>
+                    <p>Fridge not cooling, leaking, or making noise? Fast, affordable refrigerator repairs across Johannesburg.</p>
+                    <a href="fridge-repair.html" class="service-card-link">View Details →</a>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ========================================
-         SERVICE 2: REFRIGERATOR COMPRESSOR (Text Left, Image Right)
-         ======================================== -->
-    <section class="service-row" id="compressor">
-        <div class="container">
-            <div class="service-alternating reverse">
-                <div class="service-image">
-                    <img src="images/compressor.jpg" alt="Compressor Repair Johannesburg" onerror="this.src='https://placehold.co/600x400/0073e6/white?text=Compressor+Repair'">
-                </div>
-                <div class="service-info">
+                <div class="service-card-hub">
                     <div class="service-icon-large blue">
-                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
+                        <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
                     </div>
-                    <h2>Refrigerator <span class="highlight">Compressor Repair</span></h2>
-                    <p class="service-description">The compressor is the heart of your fridge. If it's failing, your food is at risk. We specialize in compressor diagnostics, repair, and replacement for all brands.</p>
-                    <ul class="service-list">
-                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Clicking or humming noises</li>
-                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Fridge not cooling at all</li>
-                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Compressor overheating</li>
-                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Complete compressor replacement</li>
-                    </ul>
-                    <div class="brand-badges">
-                        <span class="brand-badge">Samsung</span>
-                        <span class="brand-badge">LG</span>
-                        <span class="brand-badge">Bosch</span>
-                        <span class="brand-badge">Defy</span>
-                        <span class="brand-badge">Hisense</span>
-                    </div>
-                    <a href="index.html#contact" class="service-btn">Book Compressor Repair →</a>
+                    <h3>Fridge Compressor Repair</h3>
+                    <p>Compressor clicking, humming, or your fridge not cooling at all? Expert compressor diagnostics and replacement.</p>
+                    <a href="fridge-compressor-repair.html" class="service-card-link">View Details →</a>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ========================================
-         SERVICE 3: WASHING MACHINE (Image Left, Text Right)
-         ======================================== -->
-    <section class="service-row" id="washer">
-        <div class="container">
-            <div class="service-alternating">
-                <div class="service-image">
-                    <img src="images/new.jpeg" alt="Washing Machine Repair Johannesburg" onerror="this.src='https://placehold.co/600x400/0073e6/white?text=Washing+Machine+Repair'">
-                </div>
-                <div class="service-info">
+                <div class="service-card-hub">
                     <div class="service-icon-large purple">
-                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M2 12h20"/><path d="M2 12c0 5.523 4.477 10 10 10s10-4.477 10-10"/><path d="M12 2v20"/></svg>
+                        <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12h20"/><path d="M2 12c0 5.523 4.477 10 10 10s10-4.477 10-10"/><path d="M12 2v20"/></svg>
                     </div>
-                    <h2>Washing Machine <span class="highlight">Repair</span></h2>
-                    <p class="service-description">From top-loaders to front-loaders, we repair all washing machine brands and models. We fix leaks, drainage issues, spin problems, and electrical faults.</p>
-                    <ul class="service-list">
-                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Won't drain or spin</li>
-                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Leaking water</li>
-                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Loud noises / vibrating</li>
-                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Not starting or stopping</li>
-                    </ul>
-                    <div class="brand-badges">
-                        <span class="brand-badge">Samsung</span>
-                        <span class="brand-badge">LG</span>
-                        <span class="brand-badge">Bosch</span>
-                        <span class="brand-badge">Defy</span>
-                        <span class="brand-badge">Whirlpool</span>
-                    </div>
-                    <a href="index.html#contact" class="service-btn">Book Washer Repair →</a>
+                    <h3>Washing Machine Repair</h3>
+                    <p>Won't drain, leaking, or vibrating loudly? We repair all washing machine brands and models, same-day.</p>
+                    <a href="washing-machine-repair.html" class="service-card-link">View Details →</a>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ========================================
-         SERVICE 4: DISHWASHER (Text Left, Image Right)
-         ======================================== -->
-    <section class="service-row" id="dishwasher">
-        <div class="container">
-            <div class="service-alternating reverse">
-                <div class="service-image">
-                    <img src="images/5jDPXL47KXbQqafUKPzqPH-1024-80 - Copy.jpg" alt="Dishwasher Repair Johannesburg" onerror="this.src='https://placehold.co/600x400/0073e6/white?text=Dishwasher+Repair'">
-                </div>
-                <div class="service-info">
+                <div class="service-card-hub">
                     <div class="service-icon-large teal">
-                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"/><path d="M7 2v20"/><path d="M21 15V2v0a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7"/></svg>
+                        <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"/><path d="M7 2v20"/><path d="M21 15V2v0a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7"/></svg>
                     </div>
-                    <h2>Dishwasher <span class="highlight">Repair</span></h2>
-                    <p class="service-description">Get your dishwasher working again quickly. We fix drainage issues, cleaning problems, strange noises, and electrical faults on all major brands.</p>
-                    <ul class="service-list">
-                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Not draining properly</li>
-                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Dishes not clean</li>
-                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Leaking water</li>
-                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Won't start or stop</li>
-                    </ul>
-                    <div class="brand-badges">
-                        <span class="brand-badge">Bosch</span>
-                        <span class="brand-badge">Samsung</span>
-                        <span class="brand-badge">LG</span>
-                        <span class="brand-badge">Whirlpool</span>
-                    </div>
-                    <a href="index.html#contact" class="service-btn">Book Dishwasher Repair →</a>
+                    <h3>Dishwasher Repair</h3>
+                    <p>Dishwasher not draining or leaving dishes dirty? Reliable repairs for all major dishwasher brands.</p>
+                    <a href="dishwasher-repair.html" class="service-card-link">View Details →</a>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ========================================
-         SERVICE 5: OVEN (Image Left, Text Right)
-         ======================================== -->
-    <section class="service-row" id="oven">
-        <div class="container">
-            <div class="service-alternating">
-                <div class="service-image">
-                    <img src="images/oven.jpg" alt="Oven Repair Johannesburg" onerror="this.src='https://placehold.co/600x400/0073e6/white?text=Oven+Repair'">
-                </div>
-                <div class="service-info">
+                <div class="service-card-hub">
                     <div class="service-icon-large orange">
-                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M12 2v20"/><path d="M8 8h8"/><path d="M8 16h8"/></svg>
+                        <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20"/><path d="M8 8h8"/><path d="M8 16h8"/></svg>
                     </div>
-                    <h2>Oven <span class="highlight">Repair</span></h2>
-                    <p class="service-description">Don't let a broken oven ruin your day. We repair electric only, reliable service. From heating elements to control boards, we get you cooking again.</p>
-                    <ul class="service-list">
-                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Oven not heating</li>
-                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Gas igniter problems</li>
-                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Temperature inaccurate</li>
-                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Control panel issues</li>
-                    </ul>
-                    <div class="brand-badges">
-                        <span class="brand-badge">Bosch</span>
-                        <span class="brand-badge">Defy</span>
-                        <span class="brand-badge">LG</span>
-                        <span class="brand-badge">Samsung</span>
-                    </div>
-                    <a href="index.html#contact" class="service-btn">Book Oven Repair →</a>
+                    <h3>Oven Repair</h3>
+                    <p>Oven not heating or temperature inaccurate? We repair heating elements, igniters and control boards.</p>
+                    <a href="oven-repair.html" class="service-card-link">View Details →</a>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ========================================
-         SERVICE 6: STOVE & OVEN (Text Left, Image Right)
-         ======================================== -->
-    <section class="service-row" id="stove">
-        <div class="container">
-            <div class="service-alternating reverse">
-                <div class="service-image">
-                    <img src="images/stove-1.jpg" alt="Stove Repair Johannesburg" onerror="this.src='https://placehold.co/600x400/0073e6/white?text=Stove+Repair'">
-                </div>
-                <div class="service-info">
+                <div class="service-card-hub">
                     <div class="service-icon-large orange">
-                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 2v20"/></svg>
+                        <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2v20"/></svg>
                     </div>
-                    <h2>Stove <span class="highlight">Repair</span></h2>
-                    <p class="service-description">Get your stove top working again. We repair gas and electric stoves, including burner issues, ignition problems, and electrical faults.</p>
-                    <ul class="service-list">
-                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Burners not lighting</li>
-                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Uneven heating</li>
-                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Gas smell or leaks</li>
-                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Knob and switch replacement</li>
-                    </ul>
-                    <div class="brand-badges">
-                        <span class="brand-badge">Bosch</span>
-                        <span class="brand-badge">Defy</span>
-                        <span class="brand-badge">Samsung</span>
-                        <span class="brand-badge">LG</span>
-                    </div>
-                    <a href="index.html#contact" class="service-btn">Book Stove Repair →</a>
+                    <h3>Stove Repair</h3>
+                    <p>Burners not lighting or uneven heating? Gas and electric stove repairs done right, the first time.</p>
+                    <a href="stove-repair.html" class="service-card-link">View Details →</a>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ========================================
-         SERVICE 7: MICROWAVE (Image Left, Text Right)
-         ======================================== -->
-    <section class="service-row" id="microwave">
-        <div class="container">
-            <div class="service-alternating">
-                <div class="service-image">
-                    <img src="images/2019+Winnebago+MINNIE+2606RLvvvv - Copy.webp" alt="Microwave Repair Johannesburg" onerror="this.src='https://placehold.co/600x400/0073e6/white?text=Microwave+Repair'">
-                </div>
-                <div class="service-info">
+                <div class="service-card-hub">
                     <div class="service-icon-large violet">
-                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M12 8v8"/><path d="M8 12h8"/></svg>
+                        <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M12 8v8"/><path d="M8 12h8"/></svg>
                     </div>
-                    <h2>Microwave <span class="highlight">Repair</span></h2>
-                    <p class="service-description">Quick microwave repairs for countertop and built-in models. From magnetron to control panel issues, we'll have your microwave working again.</p>
-                    <ul class="service-list">
-                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Not heating</li>
-                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Buttons not working</li>
-                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Turntable not spinning</li>
-                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Door seal issues</li>
-                    </ul>
-                    <div class="brand-badges">
-                        <span class="brand-badge">Samsung</span>
-                        <span class="brand-badge">LG</span>
-                        <span class="brand-badge">Panasonic</span>
-                        <span class="brand-badge">Sharp</span>
-                    </div>
-                    <a href="index.html#contact" class="service-btn">Book Microwave Repair →</a>
+                    <h3>Microwave Repair</h3>
+                    <p>Microwave not heating or buttons unresponsive? Fast repairs for countertop and built-in microwaves.</p>
+                    <a href="microwave-repair.html" class="service-card-link">View Details →</a>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ========================================
-         SERVICE 8: DRYER (Text Left, Image Right)
-         ======================================== -->
-    <section class="service-row" id="dryer">
-        <div class="container">
-            <div class="service-alternating reverse">
-                <div class="service-image">
-                    <img src="images/dryer2.jpg" alt="Dryer Repair Johannesburg" onerror="this.src='https://placehold.co/600x400/0073e6/white?text=Dryer+Repair'">
-                </div>
-                <div class="service-info">
-                    <div class="service-icon-large orange">
-                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
-                            <rect x="4" y="4" width="16" height="16" rx="2"/>
-                            <circle cx="12" cy="12" r="3"/>
-                            <line x1="12" y1="8" x2="12" y2="4"/>
-                            <line x1="12" y1="20" x2="12" y2="16"/>
-                            <line x1="8" y1="12" x2="4" y2="12"/>
-                            <line x1="20" y1="12" x2="16" y2="12"/>
-                        </svg>
-                    </div>
-                    <h2>Dryer <span class="highlight">Repair</span></h2>
-                    <p class="service-description">Get your dryer working efficiently again. We repair all major brands of vented and condenser dryers, including heating issues, drum problems, and electrical faults.</p>
-                    <ul class="service-list">
-                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Not heating or drying</li>
-                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Strange noises (squeaking, grinding)</li>
-                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Drum not spinning</li>
-                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Belt and roller replacement</li>
-                    </ul>
-                    <div class="brand-badges">
-                        <span class="brand-badge">Bosch</span>
-                        <span class="brand-badge">Defy</span>
-                        <span class="brand-badge">Samsung</span>
-                        <span class="brand-badge">LG</span>
-                        <span class="brand-badge">Whirlpool</span>
-                    </div>
-                    <a href="index.html#contact" class="service-btn">Book Dryer Repair →</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ========================================
-         SERVICE 9: AIR CONDITIONER (Text Left, Image Right)
-         ======================================== -->
-    <section class="service-row" id="ac">
-        <div class="container">
-            <div class="service-alternating ">
-                <div class="service-image">
-                    <img src="images/5.jpeg" alt="Air Conditioner Repair Johannesburg" onerror="this.src='https://placehold.co/600x400/0073e6/white?text=AC+Repair'">
-                </div>
-                <div class="service-info">
+                <div class="service-card-hub">
                     <div class="service-icon-large sky">
-                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
+                        <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="13" r="6"/><path d="M6 5h.01M10 5h.01"/></svg>
                     </div>
-                    <h2>Air Conditioner <span class="highlight">Repair</span></h2>
-                    <p class="service-description">Stay cool with our professional air conditioner repair services. We fix split units, window units, and commercial AC systems with fast turnaround times.</p>
-                    <ul class="service-list">
-                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Not cooling properly</li>
-                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Strange noises</li>
-                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Water leakage</li>
-                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Gas refill / compressor</li>
-                    </ul>
-                    <div class="brand-badges">
-                        <span class="brand-badge">LG</span>
-                        <span class="brand-badge">Samsung</span>
-                        <span class="brand-badge">Daikin</span>
-                        <span class="brand-badge">Carrier</span>
+                    <h3>Dryer Repair</h3>
+                    <p>Tumble dryer not heating or taking too long to dry? We fix all major dryer brands and models.</p>
+                    <a href="tumble-dryer-repair.html" class="service-card-link">View Details →</a>
+                </div>
+                <div class="service-card-hub">
+                    <div class="service-icon-large sky">
+                        <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12h20"/><path d="M6 12v6M12 12v8M18 12v6"/></svg>
                     </div>
-                    <a href="index.html#contact" class="service-btn">Book AC Repair →</a>
+                    <h3>Air Conditioner Repair</h3>
+                    <p>AC not cooling or blowing warm air? Certified air conditioner repair and servicing in Johannesburg.</p>
+                    <a href="aircon-repair.html" class="service-card-link">View Details →</a>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ========================================
-         SERVICE 10: COMMERCIAL FRIDGE (Image Left, Text Right)
-         ======================================== -->
-    <section class="service-row" id="commercial-fridge">
-        <div class="container">
-            <div class="service-alternating reverse">
-                <div class="service-image">
-                    <img src="images/commercial.webp" alt="Commercial Fridge Repair Johannesburg" onerror="this.src='https://placehold.co/600x400/0073e6/white?text=Commercial+Fridge+Repair'">
-                </div>
-                <div class="service-info">
+                <div class="service-card-hub">
                     <div class="service-icon-large blue">
-                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M6 8h.01"/><path d="M6 16h.01"/></svg>
+                        <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"></rect><line x1="6" y1="8" x2="10" y2="8"></line><line x1="6" y1="12" x2="18" y2="12"></line><line x1="6" y1="16" x2="10" y2="16"></line></svg>
                     </div>
-                    <h2>Commercial <span class="highlight">Fridge Repair</span></h2>
-                    <p class="service-description">Professional commercial refrigeration repair services for restaurants, cafes, hotels, and retail businesses. Minimize downtime with our fast, reliable service.</p>
-                    <ul class="service-list">
-                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Walk-in coolers & freezers</li>
-                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Display fridges & merchandisers</li>
-                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Ice machine repair</li>
-                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Temperature control issues</li>
-                    </ul>
-                    <div class="brand-badges">
-                        <span class="brand-badge">True</span>
-                        <span class="brand-badge">Tecumseh</span>
-                        <span class="brand-badge">Danfoss</span>
-                        <span class="brand-badge">Bitzer</span>
-                        <span class="brand-badge">Carrier</span>
+                    <h3>Commercial Fridge Repair</h3>
+                    <p>Commercial fridge downtime costs you money. Fast-response repairs for restaurants, shops and offices.</p>
+                    <a href="commercial-fridge-repair.html" class="service-card-link">View Details →</a>
+                </div>
+                <div class="service-card-hub">
+                    <div class="service-icon-large blue">
+                        <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"></rect><line x1="6" y1="8" x2="10" y2="8"></line><line x1="6" y1="12" x2="18" y2="12"></line><line x1="6" y1="16" x2="10" y2="16"></line></svg>
                     </div>
-                    <a href="index.html#contact" class="service-btn">Book Commercial Fridge Repair →</a>
+                    <h3>Commercial Freezer Repair</h3>
+                    <p>Commercial freezer not holding temperature? Priority repairs to protect your stock and business.</p>
+                    <a href="commercial-freezer-repair.html" class="service-card-link">View Details →</a>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ========================================
-         SERVICE 11: COMMERCIAL FREEZER (Text Left, Image Right)
-         ======================================== -->
-    <section class="service-row" id="commercial-freezer">
-        <div class="container">
-            <div class="service-alternating">
-                <div class="service-image">
-                    <img src="images/sliding_glass_door_chest_freez.jpg" alt="Commercial Freezer Repair Johannesburg" onerror="this.src='https://placehold.co/600x400/0073e6/white?text=Commercial+Freezer+Repair'">
-                </div>
-                <div class="service-info">
-                    <div class="service-icon-large teal">
-                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
-                    </div>
-                    <h2>Commercial <span class="highlight">Freezer Repair</span></h2>
-                    <p class="service-description">Don't let a freezer breakdown cost you thousands in lost inventory. We provide fast, professional commercial freezer repair for restaurants, supermarkets, and cold storage facilities.</p>
-                    <ul class="service-list">
-                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Walk-in freezer repair</li>
-                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Blast chillers & chest freezers</li>
-                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Defrost system repair</li>
-                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Thermostat & controller issues</li>
-                    </ul>
-                    <div class="brand-badges">
-                        <span class="brand-badge">True</span>
-                        <span class="brand-badge">Tecumseh</span>
-                        <span class="brand-badge">Danfoss</span>
-                        <span class="brand-badge">Bitzer</span>
-                    </div>
-                    <a href="index.html#contact" class="service-btn">Book Commercial Freezer Repair →</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ========================================
-         SERVICE 12: APPLIANCE MAINTENANCE (Image Left, Text Right)
-         ======================================== -->
-    <section class="service-row" id="maintenance">
-        <div class="container">
-            <div class="service-alternating reverse">
-                <div class="service-image">
-                    <img src="images/AC-Repair.jpg" alt="Appliance Maintenance Johannesburg" onerror="this.src='https://placehold.co/600x400/0073e6/white?text=Appliance+Maintenance'">
-                </div>
-                <div class="service-info">
+                <div class="service-card-hub">
                     <div class="service-icon-large green">
-                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+                        <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
                     </div>
-                    <h2>Appliance <span class="highlight">Maintenance</span></h2>
-                    <p class="service-description">Prevent breakdowns before they happen. Our preventive maintenance plans keep your appliances running efficiently and extend their lifespan.</p>
-                    <ul class="service-list">
-                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Full appliance inspection</li>
-                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Cleaning & component check</li>
-                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Performance optimization</li>
-                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Early fault detection</li>
-                    </ul>
-                    <div class="brand-badges">
-                        <span class="brand-badge">All Brands</span>
-                        <span class="brand-badge">Residential</span>
-                        <span class="brand-badge">Commercial</span>
-                    </div>
-                    <a href="index.html#contact" class="service-btn">Book Maintenance →</a>
+                    <h3>Appliance Maintenance</h3>
+                    <p>Prevent costly breakdowns with a full appliance inspection, cleaning and performance check.</p>
+                    <a href="appliance-maintenance.html" class="service-card-link">View Details →</a>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ========================================
-         SERVICE 13: EMERGENCY REPAIR (Text Left, Image Right)
-         ======================================== -->
-    <section class="service-row" id="emergency">
-        <div class="container">
-            <div class="service-alternating">
-                <div class="service-image">
-                    <img src="images/1777228314218.png" alt="Emergency Appliance Repair Johannesburg" onerror="this.src='https://placehold.co/600x400/0073e6/white?text=Emergency+Repair'">
-                </div>
-                <div class="service-info">
+                <div class="service-card-hub">
                     <div class="service-icon-large red">
-                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                        <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
                     </div>
-                    <h2>Emergency <span class="highlight">Appliance Repair</span></h2>
-                    <p class="service-description">24/7 emergency appliance repair when you need it most. We're available nights, weekends, and public holidays to get your essential appliances back up and running.</p>
-                    <ul class="service-list">
-                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> 24/7 response</li>
-                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Same-day emergency call-out</li>
-                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> No after-hours surcharge</li>
-                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Priority dispatch</li>
-                    </ul>
-                    <div class="brand-badges">
-                        <span class="brand-badge">24/7 Available</span>
-                        <span class="brand-badge">Fast Response</span>
-                        <span class="brand-badge">No Extra Fee</span>
-                    </div>
-                    <a href="tel:+27739530688" class="service-btn">Call Emergency Now →</a>
+                    <h3>Emergency Appliance Repair</h3>
+                    <p>24/7 emergency appliance repair — nights, weekends and public holidays, no after-hours surcharge.</p>
+                    <a href="emergency-appliance-repair.html" class="service-card-link">View Details →</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Brands Section -->
+<!-- Brands Section -->
     <section class="brands-section">
         <div class="container">
             <div class="section-header">
@@ -569,7 +250,7 @@
         </div>
     </section>
 
-    <!-- Pricing Section -->
+<!-- Pricing Section -->
     <section class="pricing-section">
         <div class="container">
             <h2>Transparent Pricing</h2>
@@ -583,7 +264,7 @@
         </div>
     </section>
 
-    <!-- CTA Section -->
+<!-- CTA Section -->
     <section class="cta-section">
         <div class="container">
             <h2>Need an Appliance Repair?</h2>
@@ -594,13 +275,8 @@
             </div>
         </div>
     </section>
-   
 
-
-
-    
-    
-  <!-- Footer -->
+<!-- Footer -->
 <footer class="footer">
     <div class="container">
         <div class="footer-grid">
@@ -623,22 +299,29 @@
             <div class="footer-links">
                 <h4>Quick Links</h4>
                 <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#about">About Us</a></li>
-                    <li><a href="#testimonials">Testimonials</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="aboutUs.html">About Us</a></li>
+                    <li><a href="index.html#testimonials">Testimonials</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
                 </ul>
             </div>
             <div class="footer-links">
                 <h4>Our Services</h4>
                 <ul>
-                    <li><a href="#services">Refrigerator Repair</a></li>
-                    <li><a href="#services">Washing Machine Repair</a></li>
-                    <li><a href="#services">Dishwasher Repair</a></li>
-                    <li><a href="#services">Oven & Stove Repair</a></li>
-                    <li><a href="#services">Dryer Repair</a></li>
-                    <li><a href="#services">Air Conditioner Repair</a></li>
+                    <li><a href="fridge-repair.html">Refrigerator Repair</a></li>
+                    <li><a href="fridge-compressor-repair.html">Fridge Compressor Repair</a></li>
+                    <li><a href="washing-machine-repair.html">Washing Machine Repair</a></li>
+                    <li><a href="dishwasher-repair.html">Dishwasher Repair</a></li>
+                    <li><a href="oven-repair.html">Oven Repair</a></li>
+                    <li><a href="stove-repair.html">Stove Repair</a></li>
+                    <li><a href="microwave-repair.html">Microwave Repair</a></li>
+                    <li><a href="tumble-dryer-repair.html">Dryer Repair</a></li>
+                    <li><a href="aircon-repair.html">Air Conditioner Repair</a></li>
+                    <li><a href="commercial-fridge-repair.html">Commercial Fridge Repair</a></li>
+                    <li><a href="commercial-freezer-repair.html">Commercial Freezer Repair</a></li>
+                    <li><a href="appliance-maintenance.html">Appliance Maintenance</a></li>
+                    <li><a href="emergency-appliance-repair.html">Emergency Appliance Repair</a></li>
                 </ul>
             </div>
             <div class="footer-contact">
@@ -704,30 +387,20 @@
     </div>
 </footer>
 
- <!-- Back to Top Button -->
+<!-- Back to Top Button -->
 <a href="#" class="back-to-top" id="backToTop">
     <svg width="30" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
         <polyline points="18 15 12 9 6 15"></polyline>
     </svg>
 </a>
-  
     <style>
-        .service-icon-large.green {
-            background: linear-gradient(135deg, #10b981, #059669);
-        }
-        .service-icon-large.red {
-            background: linear-gradient(135deg, #ef4444, #dc2626);
-        }
-        .service-icon-large.sky {
-            background: linear-gradient(135deg, #0ea5e9, #0284c7);
-        }
-        .logo-icon-footer img {
-            width: 200px;
-            height: auto;
-        }
+        .service-icon-large.green { background: linear-gradient(135deg, #10b981, #059669); }
+        .service-icon-large.red { background: linear-gradient(135deg, #ef4444, #dc2626); }
+        .service-icon-large.sky { background: linear-gradient(135deg, #0ea5e9, #0284c7); }
+        .logo-icon-footer img { width: 200px; height: auto; }
     </style>
 
-    <!--WhatsApp Floating button--> 
+<!--WhatsApp Floating button--> 
  <!-- FLOATING CONTACT HUB (independent, clean) -->
     <div class="floating-contact-wrapper" id="floatingHub">
         <!-- Action menu: WhatsApp, Email, Call (like hamburger upward) -->
@@ -786,9 +459,6 @@
         <span class="reminder-close" id="closeReminderBtn">✕</span>
     </div>
 <!--End of button-->
-
-
-   
 
     <script src="scriptServices.js"></script>
     <script type="application/ld+json">

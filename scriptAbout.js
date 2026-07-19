@@ -66,7 +66,7 @@ if (mobileMenuBtn && navLinks) {
     });
     
     // Close menu when clicking a link
-    navLinks.querySelectorAll('a').forEach(link => {
+    navLinks.querySelectorAll('a:not(.dropdown-trigger)').forEach(link => {
         link.addEventListener('click', () => {
             closeMobileMenu();
         });
@@ -378,3 +378,12 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
 
         
+// ===== Services Dropdown (tap-to-open on mobile) =====
+document.querySelectorAll('.nav-dropdown > a.dropdown-trigger').forEach(function(trigger) {
+    trigger.addEventListener('click', function(e) {
+        if (window.innerWidth <= 768) {
+            e.preventDefault();
+            this.parentElement.classList.toggle('open');
+        }
+    });
+});

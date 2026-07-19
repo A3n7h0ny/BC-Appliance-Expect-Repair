@@ -49,7 +49,7 @@ if (mobileMenuBtn && navLinks) {
     });
     
     // Close menu when clicking a link
-    navLinks.querySelectorAll('a').forEach(link => {
+    navLinks.querySelectorAll('a:not(.dropdown-trigger)').forEach(link => {
         link.addEventListener('click', () => {
             closeMobileMenu();
         });
@@ -472,3 +472,21 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             }, 15000); // first pop after 15 secs to greet user, then every 2 min.
         })();
+// ===== Services Dropdown (tap-to-open on mobile) =====
+document.querySelectorAll('.nav-dropdown > a.dropdown-trigger').forEach(function(trigger) {
+    trigger.addEventListener('click', function(e) {
+        if (window.innerWidth <= 768) {
+            e.preventDefault();
+            this.parentElement.classList.toggle('open');
+        }
+    });
+});
+// ===== FAQ Accordion =====
+document.querySelectorAll('.faq-question').forEach(btn => {
+    btn.addEventListener('click', () => {
+        const item = btn.closest('.faq-item');
+        const wasOpen = item.classList.contains('open');
+        item.closest('.faq-list').querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+        if (!wasOpen) item.classList.add('open');
+    });
+});

@@ -239,7 +239,7 @@ if (mobileMenuBtn && navLinks) {
         mobileMenuBtn.classList.toggle('active');
         document.body.classList.toggle('menu-open');
     });
-    navLinks.querySelectorAll('a').forEach(link => link.addEventListener('click', closeMobileMenu));
+    navLinks.querySelectorAll('a:not(.dropdown-trigger)').forEach(link => link.addEventListener('click', closeMobileMenu));
     document.addEventListener('click', (e) => {
         if (navLinks.classList.contains('active') && !navLinks.contains(e.target) && !mobileMenuBtn.contains(e.target))
             closeMobileMenu();
@@ -294,8 +294,12 @@ document.querySelectorAll('.service-card, .process-card, .stat-item, .value-item
     function closeMenu() { if (!hubWrapper) return; hubWrapper.classList.remove('active'); menuOpen = false; }
     function showReminder() {
         if (!reminderPopup || menuOpen || reminderVisible) return;
-        reminderPopup.classList.add('show'); reminderVisible = true;
-        setTimeout(hideReminder, 8000);
+        if (sessionStorage.getItem('waPopupShown')) return; // only ever once per visit
+        reminderPopup.classList.add('show');
+        reminderVisible = true;
+        sessionStorage.setItem('waPopupShown', 'true');
+        // no auto-hide — stays until the visitor closes it, so it doesn't
+        // vanish while they're mid-scroll and haven't noticed it yet
     }
     function hideReminder() {
         if (!reminderPopup) return;
@@ -308,12 +312,12 @@ document.querySelectorAll('.service-card, .process-card, .stat-item, .value-item
             e.preventDefault(); e.stopPropagation();
             menuOpen ? closeMenu() : openMenu();
         });
-        mainFab.addEventListener('mouseenter', () => { if (!menuOpen && !reminderVisible) showReminder(); });
     }
 
-    // Reminder click
+    // Reminder click (ignore the Start Chat link so it can navigate normally)
     if (reminderPopup) {
         reminderPopup.addEventListener('click', (e) => {
+            if (e.target.closest('.wa-chat-start')) return;
             if (e.target.id === 'closeReminderBtn') { hideReminder(); return; }
             menuOpen ? closeMenu() : openMenu();
             hideReminder();
@@ -330,7 +334,26 @@ document.querySelectorAll('.service-card, .process-card, .stat-item, .value-item
         btn.addEventListener('click', () => setTimeout(closeMenu, 200))
     );
 
-    // Periodic reminder
-    setInterval(showReminder, 120000);
-    setTimeout(showReminder, 15000);
+    // Show once, shortly after arrival — no repeat interval anymore
+    setTimeout(showReminder, 3000);
 })();
+
+// ===== Services Dropdown (tap-to-open on mobile) =====
+document.querySelectorAll('.nav-dropdown > a.dropdown-trigger').forEach(function(trigger) {
+    trigger.addEventListener('click', function(e) {
+        if (window.innerWidth <= 768) {
+            e.preventDefault();
+            this.parentElement.classList.toggle('open');
+        }
+    });
+});
+
+// ===== FAQ Accordion =====
+document.querySelectorAll('.faq-question').forEach(btn => {
+    btn.addEventListener('click', () => {
+        const item = btn.closest('.faq-item');
+        const wasOpen = item.classList.contains('open');
+        item.closest('.faq-list').querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+        if (!wasOpen) item.classList.add('open');
+    });
+});
