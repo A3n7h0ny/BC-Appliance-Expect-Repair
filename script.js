@@ -335,7 +335,7 @@ document.querySelectorAll('.service-card, .process-card, .stat-item, .value-item
     );
 
     // Show once, shortly after arrival — no repeat interval anymore
-    setTimeout(showReminder, 3000);
+   // setTimeout(showReminder, 3000);
 })();
 
 // ===== Services Dropdown (tap-to-open on mobile) =====
