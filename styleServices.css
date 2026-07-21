@@ -70,7 +70,7 @@ a {
 ul {
     list-style: none;
 }
-.form-group
+
 section {
             padding: 80px 0;
         }
@@ -1787,6 +1787,19 @@ section {
 .quote-form-intro p { font-size: 15px; line-height: 1.6; opacity: 0.9; }
 
 .quote-hero-form-wrapper { padding: 40px; }
+.form-note {
+    font-size: 12px;
+    color: var(--gray);
+    text-align: center;
+    margin-top: 14px;
+    line-height: 1.5;
+}
+.form-note a {
+    color: var(--primary);
+    font-weight: 700;
+    text-decoration: underline;
+}
+.form-note a:hover { color: var(--primary-dark); }
 .quote-form .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
 .quote-form .form-group { margin-bottom: 16px; }
 .quote-form .form-group label {
@@ -2044,4 +2057,51 @@ section {
     .has-info-strip .nav-links {
         top: 106px;
     }
+}
+
+/* ===========================================================
+   Thank You page
+   =========================================================== */
+.thankyou-hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    padding: 140px 20px 90px;
+    background:
+        linear-gradient(160deg, rgba(0, 10, 30, 0.92) 0%, rgba(0, 30, 75, 0.88) 100%),
+        url('images/about-technician.jpg');
+    background-size: cover;
+    background-position: center;
+}
+.thankyou-hero .container { max-width: 620px; }
+.thankyou-logo {
+    width: 150px;
+    height: auto;
+    margin: 0 auto 34px;
+    display: block;
+}
+.thankyou-hero h1 {
+    font-size: 44px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    margin-bottom: 18px;
+}
+.thankyou-hero p {
+    font-size: 17px;
+    line-height: 1.7;
+    opacity: 0.9;
+    max-width: 460px;
+    margin: 0 auto 34px;
+}
+.thankyou-hero .btn-cta-primary {
+    display: inline-flex;
+}
+
+@media (max-width: 600px) {
+    .thankyou-hero { padding: 120px 20px 70px; }
+    .thankyou-hero h1 { font-size: 32px; }
+    .thankyou-logo { width: 120px; margin-bottom: 26px; }
 }

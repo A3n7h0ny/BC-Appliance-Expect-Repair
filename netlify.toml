@@ -1,3 +1,15 @@
+[[redirects]]
+  from = "/hello-world/"
+  to = "/index.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/fridge-repair-near-me/"
+  to = "/fridge-repair.html"
+  status = 301
+  force = true
+
 [[headers]]
   for = "/images/*"
   [headers.values]

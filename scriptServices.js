@@ -496,14 +496,12 @@ document.querySelectorAll('.faq-question').forEach(btn => {
 // Same mechanism as the main contact form on index.html:
 //   • Netlify detects data-netlify="true" on the <form> at build time
 //   • Submit is intercepted, POSTed via fetch (no page reload)
+//   • On success, the visitor is sent to thank-you.html
 //   • Falls back to a mailto link if the fetch fails (e.g. local dev)
 // All quote forms share name="quoteForm" so submissions from every
 // service page land together under one form in the Netlify dashboard.
 
 document.querySelectorAll('form.quote-form').forEach(function (quoteForm) {
-    const wrapper = quoteForm.closest('.quote-hero-form-wrapper');
-    const successMessage = wrapper ? wrapper.querySelector('.success-message') : null;
-
     quoteForm.addEventListener('submit', async function (e) {
         e.preventDefault();
 
@@ -522,16 +520,8 @@ document.querySelectorAll('form.quote-form').forEach(function (quoteForm) {
             });
 
             if (response.ok) {
-                quoteForm.style.display = 'none';
-                if (successMessage) successMessage.style.display = 'block';
-
-                setTimeout(() => {
-                    quoteForm.reset();
-                    quoteForm.style.display = 'block';
-                    if (successMessage) successMessage.style.display = 'none';
-                    submitBtn.disabled = false;
-                    submitBtn.innerHTML = originalText;
-                }, 5000);
+                window.location.href = 'thank-you.html';
+                return;
             } else {
                 throw new Error('Server error ' + response.status);
             }
