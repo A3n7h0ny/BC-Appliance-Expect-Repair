@@ -646,16 +646,16 @@ ul {
 .nav-dropdown:hover .dropdown-caret,
 .nav-dropdown.open .dropdown-caret { transform: rotate(180deg); }
 .dropdown-menu {
-    position: absolute; top: calc(100% + 18px); left: 50%;
+   position: absolute; top: 100%; left: 50%;
     transform: translateX(-50%) translateY(8px);
     background: #fff; border-radius: 14px; box-shadow: 0 20px 45px rgba(0,0,0,0.14);
-    padding: 10px; min-width: 250px; display: grid; gap: 2px;
+    padding:  18px 10px 10px;; min-width: 250px; display: grid; gap: 2px;
     opacity: 0; visibility: hidden; pointer-events: none;
-    transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease;
+    transition: opacity 0.25s ease 0.35s, transform 0.25s ease 0.35s, visibility 0.25s ease 0.35s;
     z-index: 500; list-style: none;
 }
 .nav-dropdown:hover .dropdown-menu,
-.nav-dropdown.open .dropdown-menu { opacity: 1; visibility: visible; pointer-events: auto; transform: translateX(-50%) translateY(0); }
+.nav-dropdown.open .dropdown-menu { opacity: 1; visibility: visible; pointer-events: auto; transform: translateX(-50%) translateY(0);  transition-delay: 0s;}
 .dropdown-menu li a { display: block; padding: 9px 14px; border-radius: 8px; font-size: 14px; font-weight: 500; white-space: nowrap; color: var(--dark, #1a1a1a); }
 .dropdown-menu li a:hover, .dropdown-menu li a.active { background: rgba(0, 115, 230, 0.08); color: var(--primary, #0073e6); }
 .dropdown-viewall a { border-top: 1px solid rgba(0,0,0,0.08); margin-top: 4px; padding-top: 12px !important; color: var(--primary, #0073e6) !important; font-weight: 600 !important; white-space: normal !important; }
@@ -681,19 +681,13 @@ ul {
                 </a>
                 
                 <ul class="dropdown-menu">
-                    <li><a href="fridge-repair.html">Refrigerator Repair Johannesburg</a></li>
-                    <li><a href="fridge-compressor-repair.html">Fridge Compressor Repair Johannesburg</a></li>
+                    <li><a href="fridge-repair.html">Fridge Repair Johannesburg</a></li>
                     <li><a href="washing-machine-repair.html">Washing Machine Repair Johannesburg</a></li>
                     <li><a href="dishwasher-repair.html">Dishwasher Repair Johannesburg</a></li>
                     <li><a href="oven-repair.html">Oven Repair Johannesburg</a></li>
                     <li><a href="stove-repair.html">Stove Repair Johannesburg</a></li>
                     <li><a href="microwave-repair.html">Microwave Repair Johannesburg</a></li>
                     <li><a href="tumble-dryer-repair.html">Dryer Repair Johannesburg</a></li>
-                    <li><a href="aircon-repair.html">Air Conditioner Repair Johannesburg</a></li>
-                    <li><a href="commercial-fridge-repair.html">Commercial Fridge Repair Johannesburg</a></li>
-                    <li><a href="commercial-freezer-repair.html">Commercial Freezer Repair Johannesburg</a></li>
-                    <li><a href="appliance-maintenance.html">Appliance Maintenance Johannesburg</a></li>
-                    <li><a href="emergency-appliance-repair.html">Emergency Appliance Repair Johannesburg</a></li>
                     <li class="dropdown-viewall"><a href="services.html">View All Services →</a></li>
                 </ul>
             </li>

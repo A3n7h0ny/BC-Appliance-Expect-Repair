@@ -1571,20 +1571,20 @@ ul {
 .nav-dropdown.open .dropdown-caret { transform: rotate(180deg); }
 .dropdown-menu {
     position: absolute;
-    top: calc(100% + 18px);
+    top: 100%;
     left: 50%;
     transform: translateX(-50%) translateY(8px);
     background: #fff;
     border-radius: 14px;
     box-shadow: 0 20px 45px rgba(0,0,0,0.14);
-    padding: 10px;
+    padding: 18px 10px 10px;
     min-width: 250px;
     display: grid;
     gap: 2px;
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
-    transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease;
+    transition: opacity 0.25s ease 0.35s, transform 0.25s ease 0.35s, visibility 0.25s ease 0.35s;
     z-index: 500;
     list-style: none;
 }
@@ -1594,6 +1594,7 @@ ul {
     visibility: visible;
     pointer-events: auto;
     transform: translateX(-50%) translateY(0);
+    transition-delay: 0s;
 }
 .dropdown-menu li a {
     display: block;

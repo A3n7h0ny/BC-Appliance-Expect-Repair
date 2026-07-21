@@ -490,3 +490,66 @@ document.querySelectorAll('.faq-question').forEach(btn => {
         if (!wasOpen) item.classList.add('open');
     });
 });
+// ========================================
+// QUOTE FORM — Netlify Forms handler (service pages)
+// ========================================
+// Same mechanism as the main contact form on index.html:
+//   • Netlify detects data-netlify="true" on the <form> at build time
+//   • Submit is intercepted, POSTed via fetch (no page reload)
+//   • Falls back to a mailto link if the fetch fails (e.g. local dev)
+// All quote forms share name="quoteForm" so submissions from every
+// service page land together under one form in the Netlify dashboard.
+
+document.querySelectorAll('form.quote-form').forEach(function (quoteForm) {
+    const wrapper = quoteForm.closest('.quote-hero-form-wrapper');
+    const successMessage = wrapper ? wrapper.querySelector('.success-message') : null;
+
+    quoteForm.addEventListener('submit', async function (e) {
+        e.preventDefault();
+
+        const submitBtn = quoteForm.querySelector('button[type="submit"]');
+        const originalText = submitBtn.innerHTML;
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = 'Sending… <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>';
+
+        const formData = new FormData(quoteForm);
+
+        try {
+            const response = await fetch('/', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                body: new URLSearchParams(formData).toString()
+            });
+
+            if (response.ok) {
+                quoteForm.style.display = 'none';
+                if (successMessage) successMessage.style.display = 'block';
+
+                setTimeout(() => {
+                    quoteForm.reset();
+                    quoteForm.style.display = 'block';
+                    if (successMessage) successMessage.style.display = 'none';
+                    submitBtn.disabled = false;
+                    submitBtn.innerHTML = originalText;
+                }, 5000);
+            } else {
+                throw new Error('Server error ' + response.status);
+            }
+        } catch (err) {
+            console.warn('Netlify form post failed, falling back to mailto:', err);
+            const name    = formData.get('name') || '';
+            const phone   = formData.get('phone') || '';
+            const email   = formData.get('email') || '';
+            const service = formData.get('service') || '';
+            const location = formData.get('location') || '';
+            const message = formData.get('message') || '';
+            const body = encodeURIComponent(
+                `Service: ${service}\nName: ${name}\nPhone: ${phone}\nEmail: ${email}\nLocation: ${location}\n\nMessage:\n${message}`
+            );
+            window.location.href = `mailto:bs.aerepair@gmail.com?subject=Quote%20Request%20-%20${encodeURIComponent(service)}&body=${body}`;
+
+            submitBtn.disabled = false;
+            submitBtn.innerHTML = originalText;
+        }
+    });
+});
