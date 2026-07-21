@@ -7,7 +7,6 @@ const navbar      = document.getElementById('navbar');
 const navLinks    = document.getElementById('navLinks');
 const mobileMenuBtn = document.getElementById('mobileMenuBtn');
 const contactForm = document.getElementById('contactForm');
-const successMessage = document.getElementById('successMessage');
 
 // ========================================
 // CONTACT FORM — Netlify Forms handler
@@ -45,18 +44,8 @@ if (contactForm) {
             });
 
             if (response.ok) {
-                // Success
-                contactForm.style.display = 'none';
-                successMessage.style.display = 'block';
-
-                // Reset after 5 seconds
-                setTimeout(() => {
-                    contactForm.reset();
-                    contactForm.style.display = 'block';
-                    successMessage.style.display = 'none';
-                    submitBtn.disabled = false;
-                    submitBtn.innerHTML = originalText;
-                }, 5000);
+                window.location.href = '/thank-you.html';
+                return;
             } else {
                 throw new Error('Server error ' + response.status);
             }

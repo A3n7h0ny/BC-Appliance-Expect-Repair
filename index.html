@@ -35,7 +35,7 @@
     <!-- Google Font preconnect (ADD above the existing Google Fonts link) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v=1">
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
@@ -854,7 +854,7 @@
                 </div>
                 <div class="contact-form-wrapper">
                     <h3>Send Us a Message</h3>
-                    <form class="contact-form" id="contactForm" name="contactForm" method="POST" data-netlify="true" netlify-honeypot="bot-field" netlify>
+                    <form class="contact-form" id="contactForm" name="contactForm" method="POST" action="/thank-you.html" data-netlify="true" netlify-honeypot="bot-field" netlify>
                         <!-- Netlify hidden fields -->
                         <input type="hidden" name="form-name" value="contactForm">
                         <p class="hidden" style="display:none"><label>Don't fill this out: <input name="bot-field"></label></p>
@@ -897,11 +897,6 @@
                         </button>
                         <p class="form-note">By submitting, you agree to our <a href="privacy-policy.html">Privacy Policy</a></p>
                     </form>
-                    <div class="success-message" id="successMessage">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-                        <h4>Message Sent!</h4>
-                        <p>We'll get back to you within 24 hours.</p>
-                    </div>
                 </div>
             </div>
         </div>
@@ -1093,7 +1088,7 @@
 <!--End of button-->
 
 
-    <script src="script.js"></script>
+    <script src="script.js?v=1"></script>
     <script type="application/ld+json">
 {
   "@context": "https://schema.org",

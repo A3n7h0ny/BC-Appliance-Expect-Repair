@@ -520,7 +520,7 @@ document.querySelectorAll('form.quote-form').forEach(function (quoteForm) {
             });
 
             if (response.ok) {
-                window.location.href = 'thank-you.html';
+                window.location.href = '/thank-you.html';
                 return;
             } else {
                 throw new Error('Server error ' + response.status);
