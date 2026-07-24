@@ -247,7 +247,7 @@ section {
 
 /* Services Hero */
         .services-hero {
-            background: linear-gradient(135deg, rgba(0, 115, 230, 0.9) 0%, rgba(0, 89, 179, 0.85) 100%), url('images/Gemini_Generated_Image_1naiom1naiom1nai-1024x559.webp');
+            background: linear-gradient(135deg, rgba(0, 115, 230, 0.9) 0%, rgba(0, 89, 179, 0.85) 100%), url('images/gemini.webp');
             background-size: cover;
             background-position: center;
             padding: 140px 0 80px;
