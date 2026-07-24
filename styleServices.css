@@ -247,7 +247,7 @@ section {
 
 /* Services Hero */
         .services-hero {
-            background: linear-gradient(135deg, rgba(0, 115, 230, 0.9) 0%, rgba(0, 89, 179, 0.85) 100%), url('images/Gemini_Generated_Image_1naiom1naiom1nai-1024x559.webp');
+            background: linear-gradient(135deg, rgba(0, 115, 230, 0.9) 0%, rgba(0, 89, 179, 0.85) 100%), url('images/parts.jpg');
             background-size: cover;
             background-position: center;
             padding: 140px 0 80px;
@@ -760,10 +760,20 @@ section {
     z-index: 1;
 }
 .faq-content { position: relative; z-index: 2; }
-.section-header.light .section-tag { color: #fff; background: rgba(255,255,255,0.12); }
-.section-header.light h2 { color: #fff; }
-.section-header.light p { color: rgba(255,255,255,0.75); }
 
+/* Light header on dark background — WHITE text */
+.section-header.light .section-tag { 
+    color: #fff; 
+    background: rgba(255, 255, 255, 0.12); 
+}
+
+.section-header.light h2 { 
+    color: #fff; 
+}
+
+.section-header.light p { 
+    color: rgba(255, 255, 255, 0.75); 
+}
 .faq-list {
     max-width: 780px;
     margin: 40px auto 0;
@@ -1706,7 +1716,7 @@ section {
 
 /* --- Hero (centered, no form) --- */
 .quote-hero {
-    background: linear-gradient(135deg, rgba(0, 46, 131, 0.95) 0%, rgba(0, 89, 179, 0.9) 100%), url('images/Gemini_Generated_Image_1naiom1naiom1nai-1024x559.webp');
+    background: linear-gradient(135deg, rgba(0, 46, 131, 0.95) 0%, rgba(0, 89, 179, 0.9) 100%), url('images/faq2.jpg');
     background-size: cover;
     background-position: center;
     padding: 186px 0 70px;
@@ -2107,32 +2117,166 @@ section {
     .thankyou-logo { width: 120px; margin-bottom: 26px; }
 }
 
+
+
 /* ===========================================================
-   Services Cards — dark overlay section (services.html)
+   Services Cards — each card has its own background image
    =========================================================== */
 .services-cards-dark {
     position: relative;
     padding: 90px 0;
     overflow: hidden;
-    background-image: url('images/about-technician.jpg');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
+    background: var(--light-gray);
 }
-.services-cards-overlay {
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(160deg, rgba(0, 10, 30, 0.90) 0%, rgba(0, 35, 85, 0.86) 100%);
-    z-index: 1;
-}
+
 .services-cards-content {
     position: relative;
     z-index: 2;
 }
 
+.services-grid-hub {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 26px;
+    margin-top: 40px;
+}
+
+/* Each card — with background image */
+.service-card-hub {
+    position: relative;
+    border-radius: 18px;
+    padding: 0;
+    overflow: hidden;
+    min-height: 320px;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    background-size: cover;
+    background-position: center;
+}
+
+.service-card-hub:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+}
+
+/* Dark overlay on each card */
+.card-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.226) 0%, rgb(0, 0, 0) 100%);
+    z-index: 1;
+}
+
+/* Card content sits above overlay */
+.card-content {
+    position: relative;
+    z-index: 2;
+    padding: 32px 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    flex: 1;
+    justify-content: flex-end;
+    min-height: 320px;
+}
+
+/* Text colors on dark backgrounds */
+.card-content h3 {
+    color: #ffffff;
+    font-size: 20px;
+    margin: 0;
+}
+
+.card-content p {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 14.5px;
+    opacity: 1;
+    margin: 0;
+    line-height: 1.6;
+}
+
+.card-content .service-card-link {
+    margin-top: auto;
+    font-weight: 700;
+    color: #ffffff;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(255, 255, 255, 0.15);
+    padding: 8px 16px;
+    border-radius: 30px;
+    width: fit-content;
+    transition: background 0.2s ease;
+}
+
+.card-content .service-card-link:hover {
+    background: rgba(255, 255, 255, 0.25);
+}
+
+/* Icons on dark backgrounds */
+.card-content .service-icon-large {
+    margin-bottom: 8px;
+}
+
+/* Individual card background images */
+.card-bg-fridge {
+    background-image: url('images/samsung_2_door.jpg');
+}
+.card-bg-washer {
+    background-image: url('images/dryer.jpeg');
+}
+.card-bg-dishwasher {
+    background-image: url('images/dishwasher.jpg');
+}
+.card-bg-oven {
+    background-image: url('images/PRO-2.jpg');
+}
+.card-bg-stove {
+    background-image: url('images/stove-2___13133653149.png');
+}
+.card-bg-microwave {
+    background-image: url('images/2019+Winnebago+MINNIE+2606RLvvvv - Copy.webp');
+}
+.card-bg-dryer {
+    background-image: url('images/dryer2.jpg');
+}
+.card-bg-ac {
+    background-image: url('images/6.jpeg');
+}
+.card-bg-commercial {
+    background-image: url('images/commercial.webp');
+}
+.card-bg-freezer {
+    background-image: url('images/sliding_glass_door_chest_freez.jpg');
+}
+.card-bg-maintenance {
+    background-image: url('images/faq2.jpg');
+}
+.card-bg-emergency {
+    background-image: url('images/1777228297645-copy.png');
+}
+
 @media (max-width: 900px) {
     .services-cards-dark {
-        background-attachment: scroll;
         padding: 60px 0;
+    }
+}
+
+@media (max-width: 600px) {
+    .service-card-hub {
+        min-height: 280px;
+    }
+    .card-content {
+        min-height: 280px;
+        padding: 24px 20px;
+    }
+    .card-content h3 {
+        font-size: 18px;
+    }
+    .card-content p {
+        font-size: 13px;
     }
 }

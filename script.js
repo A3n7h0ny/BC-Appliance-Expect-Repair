@@ -346,3 +346,37 @@ document.querySelectorAll('.faq-question').forEach(btn => {
         if (!wasOpen) item.classList.add('open');
     });
 });
+
+// ========================================
+// Hero Image Hover Effect
+// ========================================
+
+const heroImage = document.querySelector('.hero-image img');
+
+if (heroImage) {
+    // Store original image
+    const originalSrc = heroImage.src;
+    const hoverSrc = 'images/heroimage.png'; // Change to your second image
+    
+    heroImage.addEventListener('mouseenter', function() {
+        this.src = hoverSrc;
+        this.style.transition = 'transform 0.5s ease, opacity 0.5s ease';
+        this.style.transform = 'scale(1.05)';
+    });
+    
+    heroImage.addEventListener('mouseleave', function() {
+        this.src = originalSrc;
+        this.style.transform = 'scale(1)';
+    });
+    
+    // Also work on touch devices (tap to change)
+    heroImage.addEventListener('touchstart', function() {
+        if (this.dataset.touched === 'true') {
+            this.src = originalSrc;
+            this.dataset.touched = 'false';
+        } else {
+            this.src = hoverSrc;
+            this.dataset.touched = 'true';
+        }
+    });
+}
