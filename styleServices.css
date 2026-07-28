@@ -1716,7 +1716,7 @@ section {
 
 /* --- Hero (centered, no form) --- */
 .quote-hero {
-    background: linear-gradient(135deg, rgba(0, 46, 131, 0.95) 0%, rgba(0, 89, 179, 0.9) 100%), url('images/faq2.jpg');
+    background: linear-gradient(135deg, rgba(25, 25, 26, 0.377) 0%, rgba(1, 15, 29, 0.452) 100%), url('images/likompo.jpeg');
     background-size: cover;
     background-position: center;
     padding: 186px 0 70px;
@@ -1760,6 +1760,39 @@ section {
 }
 .quote-hero-stat strong { color: var(--accent); font-size: 16px; }
 
+.quote-hero-google-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 30px;
+    text-decoration: none;
+    color: #fff;
+    transition: background 0.25s ease, transform 0.25s ease;
+}
+.quote-hero-google-badge:hover {
+    background: rgba(255, 255, 255, 0.18);
+    transform: translateY(-2px);
+}
+.quote-hero-google-rating {
+    font-size: 14.5px;
+    font-weight: 600;
+}
+.quote-hero-google-rating strong { font-size: 16px; }
+.quote-hero-google-stars {
+    display: inline-flex;
+    align-items: center;
+    gap: 1px;
+    color: #FBBC05;
+}
+
+@media (max-width: 500px) {
+    .quote-hero-google-badge { padding: 7px 12px; }
+    .quote-hero-google-rating { font-size: 13px; }
+}
+
 @media (max-width: 900px) {
     .quote-hero { padding: 166px 0 50px; }
     .quote-hero h1 { font-size: 32px; }
@@ -1784,7 +1817,7 @@ section {
 .quote-form-intro {
     background:
         linear-gradient(135deg, rgba(0, 30, 70, 0.62), rgba(0, 60, 130, 0.58)),
-        url('images/about-technician.jpg');
+        url('images/call.jpg');
     background-size: cover;
     background-position: center;
     color: #fff;
