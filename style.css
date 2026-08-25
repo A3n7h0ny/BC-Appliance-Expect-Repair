@@ -250,7 +250,7 @@ ul {
 .hero {
    
      padding: 140px 0 80px;
-    background-image: linear-gradient(90deg,rgba(2, 56, 128, 0.993)0%,rgb(0, 70, 161)40%, rgba(49, 49, 49, 0.267)100%),url('images/OEM.jpg');
+    background-image: linear-gradient(90deg,rgba(2, 56, 128, 0.993)0%,rgb(0, 70, 161)40%, rgba(49, 49, 49, 0.267)100%),url('images/inhouserepair.png');
    background-size: cover;
    background-position: center;
    background-repeat: none;
@@ -319,7 +319,7 @@ ul {
 }
 
 .hero h1 {
-    font-size: 52px;
+    font-size: 55px;
     font-weight: 900;
     line-height: 1.15;
     margin-bottom: 20px;
