@@ -431,11 +431,11 @@ section {
         }
 
         .service-row:nth-child(even) {
-            background-color: var(--white);
+            background-color: var(--light-dark);
         }
 
         .service-row:nth-child(odd) {
-            background-color: var(--white);
+            background-color: var(--light-dark);
         }
         
 
@@ -483,7 +483,7 @@ section {
             margin-bottom: 24px;
         }
         .service-alternating .service-info h2{
-            color: var(--dark);
+            color: var(--white);
             font-size: 32px;
             font-weight: 700;
             margin-bottom: 16px;
@@ -493,10 +493,10 @@ section {
             font-size: 32px;
             font-weight: 700;
             margin-bottom: 16px;
-            color: var(--dark);
+            color: var(--white);
         }
         .service-alternating.reverse .service-description {
-             color: var(--gray);
+             color: rgba(255,255,255,0.75);
             font-size: 16px;
             line-height: 1.7;
             margin-bottom: 20px;
@@ -507,7 +507,7 @@ section {
         }
 
         .service-alternating .service-description {
-            color: var(--gray);
+            color: rgba(255,255,255,0.75);
             font-size: 16px;
             line-height: 1.7;
             margin-bottom: 20px;
@@ -526,7 +526,7 @@ section {
             align-items: center;
             gap: 8px;
             font-size: 14px;
-            color: var(--dark);
+            color: var(--white);
         }
 
         .service-list li svg {
@@ -1750,7 +1750,7 @@ section {
 
 /* --- Hero (centered, no form) --- */
 .quote-hero {
-    background: linear-gradient(135deg, rgba(25, 25, 26, 0.397) 0%, rgba(1, 15, 29, 0.473) 100%), url('images/faq2.jpg');
+    background: linear-gradient(135deg, rgba(25, 25, 26, 0.397) 0%, rgba(1, 15, 29, 0.473) 100%), url('images/likompo.jpeg');
     background-size: cover;
     background-position: center;
     padding: 186px 0 70px;
@@ -1921,18 +1921,21 @@ section {
 .service-checklist-label {
     font-weight: 700;
     margin: 18px 0 10px;
-    color: var(--dark);
+    color: var(--white);
+}
+.service-row .section-tag {
+    background: rgba(255,255,255,0.15);
+    color: #fff;
 }
 .service-types-block {
     margin-top: 60px;
     padding-top: 50px;
-    border-top: 1px solid rgba(0,0,0,0.08);
+    border-top: 1px solid rgba(255,255,255,0.12);
     text-align: center;
-    background: var(--white);
 }
 .service-types-block .section-tag { margin-bottom: 12px; }
-.service-types-block h3 { font-size: 28px; font-weight: 800; margin-bottom: 14px; color: var(--dark); }
-.service-types-block > p { max-width: 640px; margin: 0 auto 30px; color: var(--gray); }
+.service-types-block h3 { font-size: 28px; font-weight: 800; margin-bottom: 14px; color: var(--white); }
+.service-types-block > p { max-width: 640px; margin: 0 auto 30px; color: rgba(255,255,255,0.75); }
 .service-types-list {
     list-style: none;
     display: grid;
@@ -1957,7 +1960,7 @@ section {
 /* --- Why Choose Us --- */
 .why-choose-section {
     padding: 90px 0;
-    background: var(--dark);
+    background: var(--primary-dark);
     color: var(--white);
 }
 .why-choose-section .section-header p { max-width: 720px; color: rgba(255,255,255,0.75); }
