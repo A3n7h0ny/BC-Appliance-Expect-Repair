@@ -1750,7 +1750,7 @@ section {
 
 /* --- Hero (centered, no form) --- */
 .quote-hero {
-    background: linear-gradient(135deg, rgba(25, 25, 26, 0.377) 0%, rgba(1, 15, 29, 0.452) 100%), url('images/likompo.jpeg');
+    background: linear-gradient(135deg, rgba(25, 25, 26, 0.397) 0%, rgba(1, 15, 29, 0.473) 100%), url('images/faq2.jpg');
     background-size: cover;
     background-position: center;
     padding: 186px 0 70px;
