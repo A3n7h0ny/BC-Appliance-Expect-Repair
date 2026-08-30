@@ -1,15 +1,98 @@
+# ── REDIRECTS ────────────────────────────────────────────────
+# Old WordPress/hello-world URL
 [[redirects]]
   from = "/hello-world/"
-  to = "/index.html"
+  to = "/"
+  status = 301
+  force = true
+
+# Redirect /fridge-repair-near-me/ to clean service page (no .html)
+[[redirects]]
+  from = "/fridge-repair-near-me/"
+  to = "/fridge-repair"
+  status = 301
+  force = true
+
+# Redirect any .html URLs to clean versions (fixes the 21 redirect pages)
+[[redirects]]
+  from = "/index.html"
+  to = "/"
   status = 301
   force = true
 
 [[redirects]]
-  from = "/fridge-repair-near-me/"
-  to = "/fridge-repair.html"
+  from = "/services.html"
+  to = "/services"
   status = 301
   force = true
 
+[[redirects]]
+  from = "/aboutUs.html"
+  to = "/aboutUs"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/fridge-repair.html"
+  to = "/fridge-repair"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/washing-machine-repair.html"
+  to = "/washing-machine-repair"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/dishwasher-repair.html"
+  to = "/dishwasher-repair"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/oven-repair.html"
+  to = "/oven-repair"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/stove-repair.html"
+  to = "/stove-repair"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/microwave-repair.html"
+  to = "/microwave-repair"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/tumble-dryer-repair.html"
+  to = "/tumble-dryer-repair"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/privacy-policy.html"
+  to = "/privacy-policy"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/terms-of-service.html"
+  to = "/terms-of-service"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/thank-you.html"
+  to = "/thank-you"
+  status = 301
+  force = true
+
+# ── CACHE HEADERS ────────────────────────────────────────────
 [[headers]]
   for = "/images/*"
   [headers.values]
