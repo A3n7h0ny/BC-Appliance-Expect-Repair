@@ -13,7 +13,83 @@
   status = 301
   force = true
 
-# Redirect any .html URLs to clean versions (fixes the 21 redirect pages)
+# Removed pages — redirect old URLs (both .html and clean forms, since
+# Google may have indexed either) to the closest live equivalent.
+[[redirects]]
+  from = "/fridge-compressor-repair"
+  to = "/fridge-repair"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/fridge-compressor-repair.html"
+  to = "/fridge-repair"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/commercial-fridge-repair"
+  to = "/fridge-repair"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/commercial-fridge-repair.html"
+  to = "/fridge-repair"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/commercial-freezer-repair"
+  to = "/fridge-repair"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/commercial-freezer-repair.html"
+  to = "/fridge-repair"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/aircon-repair"
+  to = "/services"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/aircon-repair.html"
+  to = "/services"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/appliance-maintenance"
+  to = "/services"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/appliance-maintenance.html"
+  to = "/services"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/emergency-appliance-repair"
+  to = "/services"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/emergency-appliance-repair.html"
+  to = "/services"
+  status = 301
+  force = true
+
+# Catch old .html URLs (bookmarks, backlinks, cached Google results)
+# and 301 them to the clean canonical URL. Internal links no longer
+# use .html, so these only fire for external/legacy requests now.
 [[redirects]]
   from = "/index.html"
   to = "/"
