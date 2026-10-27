@@ -292,7 +292,7 @@ ul {
             background: linear-gradient(135deg, rgba(0, 115, 230, 0.9) 0%, rgba(0, 89, 179, 0.85) 100%), url('images/AC-Repair.jpg');
             background-size: cover;
             background-position: center;
-            padding: 140px 0 80px;
+            padding: 176px 0 80px;
             margin-top: 0;
             color: white;
             position: relative;
@@ -865,7 +865,7 @@ ul {
                 padding: 60px 0;
             }
             .about-hero {
-                padding: 100px 0 60px;
+                padding: 136px 0 60px;
             }
             .about-hero-content h1 {
                 font-size: 2rem;
@@ -1706,4 +1706,45 @@ ul {
     margin-top: auto;
     font-weight: 700;
     color: var(--primary, #0073e6);
+}
+
+/* ===========================================================
+   Info Strip: "Need help? WhatsApp us / email" bar
+   Pinned directly under the fixed navbar (body.has-info-strip)
+   =========================================================== */
+.info-strip {
+    position: fixed;
+    top: 70px;
+    left: 0;
+    right: 0;
+    z-index: 998;
+    background: rgb(0, 46, 131);
+}
+.info-strip-inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    padding: 9px 20px;
+    flex-wrap: wrap;
+}
+.info-strip-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    opacity: 0.92;
+    transition: opacity 0.2s ease;
+}
+.info-strip-item:hover { opacity: 1; text-decoration: underline; }
+.info-strip-item svg { flex-shrink: 0; }
+@media (max-width: 600px) {
+    .info-strip-inner { gap: 16px; padding: 8px 14px; }
+    .info-strip-item { font-size: 11.5px; }
+}
+@media (max-width: 768px) {
+    .has-info-strip .nav-links { top: 106px; }
 }

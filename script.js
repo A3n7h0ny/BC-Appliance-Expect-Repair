@@ -44,7 +44,7 @@ if (contactForm) {
             });
 
             if (response.ok) {
-                window.location.href = '/thank-you.html';
+                window.location.href = '/thank-you';
                 return;
             } else {
                 throw new Error('Server error ' + response.status);
@@ -56,8 +56,12 @@ if (contactForm) {
             const phone   = formData.get('phone') || '';
             const email   = formData.get('email') || '';
             const message = formData.get('message') || '';
+            const appliance = formData.get('appliance') || '';
+            const location = formData.get('location') || '';
+            const reply = formData.get('reply_preference') || '';
+            const visitDate = formData.get('preferred_date') || 'Not specified (quote only)';
             const body = encodeURIComponent(
-                `Name: ${name}\nPhone: ${phone}\nEmail: ${email}\n\nMessage:\n${message}`
+                `Name: ${name}\nPhone: ${phone}\nEmail: ${email}\nAppliance: ${appliance}\nLocation / address: ${location}\nContact me via: ${reply}\nPreferred visit date: ${visitDate}\n\nMessage:\n${message}`
             );
             window.location.href = `mailto:bs.aerepair@gmail.com?subject=Repair%20Booking%20Request%20from%20${encodeURIComponent(name)}&body=${body}`;
 
@@ -380,3 +384,23 @@ if (heroImage) {
         }
     });
 }
+
+// ===== Visit date: don't allow past dates =====
+document.querySelectorAll('input[type="date"][name="preferred_date"]').forEach(function (d) {
+    var t = new Date();
+    t.setMinutes(t.getMinutes() - t.getTimezoneOffset());
+    d.min = t.toISOString().split('T')[0];
+});
+
+// ===== Scroll strip (index): show Call Now / WhatsApp Us after scrolling =====
+(function () {
+    var strip = document.getElementById('scrollStrip');
+    if (!strip) return;
+    function update() {
+        var show = window.scrollY > 300;
+        strip.classList.toggle('is-visible', show);
+        strip.setAttribute('aria-hidden', show ? 'false' : 'true');
+    }
+    window.addEventListener('scroll', update, { passive: true });
+    update();
+})();

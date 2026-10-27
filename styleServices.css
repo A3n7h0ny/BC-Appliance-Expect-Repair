@@ -250,7 +250,7 @@ section {
             background: linear-gradient(135deg, rgba(0, 115, 230, 0.9) 0%, rgba(0, 89, 179, 0.85) 100%), url('images/parts.jpg');
             background-size: cover;
             background-position: center;
-            padding: 140px 0 80px;
+            padding: 176px 0 80px;
             margin-top: 0;
             color: white;
             text-align: center;
@@ -2394,3 +2394,18 @@ section {
         font-size: 13px;
     }
 }
+
+/* ===== Form extras: optional label + hint ===== */
+.form-optional {
+    font-weight: 400;
+    color: var(--gray);
+    font-size: 12.5px;
+}
+.form-hint {
+    display: block;
+    margin-top: 5px;
+    font-size: 12px;
+    color: var(--gray);
+    line-height: 1.4;
+}
+.form-row { align-items: start; }
