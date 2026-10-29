@@ -360,7 +360,7 @@ const heroImage = document.querySelector('.hero-image img');
 if (heroImage) {
     // Store original image
     const originalSrc = heroImage.src;
-    const hoverSrc = 'images/heroimage.png'; // Change to your second image
+    const hoverSrc = 'images/heroimage.webp'; // Change to your second image
     
     heroImage.addEventListener('mouseenter', function() {
         this.src = hoverSrc;
