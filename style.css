@@ -1,3 +1,19 @@
+/* Inter (self-hosted, latin) + metric-matched fallback to avoid layout shift */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url('fonts/inter-latin-wght-normal.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Inter Fallback';
+  src: local('Arial');
+  size-adjust: 107.4%;
+  ascent-override: 90.2%;
+  descent-override: 22.5%;
+  line-gap-override: 0%;
+}
 /* ========================================
 ProFix Appliance Repair - Simple CSS
 ======================================== */
@@ -50,7 +66,7 @@ html {
   scroll-behavior: smooth;
 }
 body {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto ,sans-serif;
+  font-family: 'Inter', 'Inter Fallback', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto ,sans-serif;
   line-height: 1.6;
   color: var(--dark);
   background: var(--white);
