@@ -338,11 +338,11 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             const slideshowData = [
         
         {
-            src: 'images/fixing.jpeg',
+            src: 'images/fixing.webp',
             caption: 'Expert technicians repairing appliances across Joburg & Pretoria'
         },
         {
-            src: 'images/1777228297645.png',
+            src: 'images/1777228297645.webp',
             caption: 'We are prepared to come to you'
         },
        

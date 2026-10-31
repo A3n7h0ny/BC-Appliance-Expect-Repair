@@ -2,11 +2,12 @@
 <html lang="en">
 <head>
 <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-PJBLDL96');</script>
+<script>
+window.dataLayer=window.dataLayer||[];window.dataLayer.push({'gtm.start':new Date().getTime(),event:'gtm.js'});
+(function(){var loaded=false;function loadGTM(){if(loaded)return;loaded=true;var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtm.js?id=GTM-PJBLDL96';document.head.appendChild(s);}
+['scroll','pointerdown','keydown','touchstart'].forEach(function(ev){addEventListener(ev,loadGTM,{once:true,passive:true});});
+addEventListener('load',function(){setTimeout(loadGTM,4000);});})();
+</script>
 <!-- End Google Tag Manager -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,7 +18,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <meta name="robots" content="index, follow">
     <meta property="og:title" content="Terms of Service | BS Appliance Expert Repair">
     <meta property="og:description" content="Terms of Service for appliance repair services in Johannesburg, Pretoria, and surrounding areas. Read about warranties, cancellations, and liability.">
-    <meta property="og:image" content="https://www.bsapplianceexpectrepairs.co.za/images/logoPro2.0.png">
+    <meta property="og:image" content="https://www.bsapplianceexpectrepairs.co.za/images/og-image.png">
     <meta property="og:url" content="https://www.bsapplianceexpectrepairs.co.za/terms-of-service">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="BS Appliance Expert Repair">
@@ -28,7 +29,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <link rel="canonical" href="https://www.bsapplianceexpectrepairs.co.za/terms-of-service">
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96">
-    <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="shortcut icon" href="favicon.ico">
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
     <meta name="apple-mobile-web-app-title" content="BS Appliance">
@@ -36,7 +36,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <meta name="theme-color" content="#ffffff">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"></noscript>
     <style>
         * {
             margin: 0;
@@ -514,7 +515,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 </a>
                 <a href="/#contact" class="btn btn-primary">Book Now</a>
             </div>
-            <button class="mobile-menu-btn" id="mobileMenuBtn">
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Open menu" aria-controls="navLinks">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -537,6 +538,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
 
 
+<main id="main">
 <div class="terms-container">
     <div class="terms-card">
         <div class="terms-header">
@@ -729,6 +731,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <a href="/">← Back to Homepage</a>
     </div>
 </div>
+</main>
 
 <script>
     // Mobile Menu Toggle

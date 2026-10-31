@@ -2,11 +2,12 @@
 <html lang="en">
 <head>
 <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-PJBLDL96');</script>
+<script>
+window.dataLayer=window.dataLayer||[];window.dataLayer.push({'gtm.start':new Date().getTime(),event:'gtm.js'});
+(function(){var loaded=false;function loadGTM(){if(loaded)return;loaded=true;var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtm.js?id=GTM-PJBLDL96';document.head.appendChild(s);}
+['scroll','pointerdown','keydown','touchstart'].forEach(function(ev){addEventListener(ev,loadGTM,{once:true,passive:true});});
+addEventListener('load',function(){setTimeout(loadGTM,4000);});})();
+</script>
 <!-- End Google Tag Manager -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,7 +15,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <meta name="description" content="Thank you for contacting BS Appliance Expert Repair. We've received your message and will get back to you as soon as we can.">
     <meta name="robots" content="noindex, follow">
     <link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96">
-    <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="shortcut icon" href="favicon.ico">
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
     <meta name="apple-mobile-web-app-title" content="BS Appliance">
@@ -23,8 +23,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="canonical" href="https://www.bsapplianceexpectrepairs.co.za/thank-you">
-    <link rel="stylesheet" href="styleServices.css?v=14">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styleServices.css?v=15">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"></noscript>
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
@@ -65,7 +66,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 </a>
                 <a href="/#contact" class="btn btn-primary">Book Now</a>
             </div>
-            <button class="mobile-menu-btn" id="mobileMenuBtn">
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Open menu" aria-controls="navLinks">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -74,6 +75,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </nav>
 
     <!-- Thank You Hero -->
+    <main id="main">
     <section class="thankyou-hero">
         <div class="container">
             <img src="images/outline.svg" alt="BS Appliance Expert Repair" class="thankyou-logo">
@@ -85,6 +87,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </a>
         </div>
     </section>
+
+    </main>
 
     <!-- Footer -->
 <footer class="footer">

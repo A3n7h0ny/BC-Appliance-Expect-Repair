@@ -208,12 +208,17 @@ if (viewMoreBtn) viewMoreBtn.addEventListener('click', () => { showAll = !showAl
 // ========================================
 // Navbar scroll shadow
 // ========================================
+let navTicking = false;
 window.addEventListener('scroll', () => {
-    if (!navbar) return;
-    navbar.style.boxShadow = window.pageYOffset > 50
-        ? '0 4px 30px rgba(0,0,0,0.1)'
-        : '0 2px 20px rgba(0,0,0,0.05)';
-});
+    if (!navbar || navTicking) return;
+    navTicking = true;
+    requestAnimationFrame(() => {
+        navbar.style.boxShadow = window.pageYOffset > 50
+            ? '0 4px 30px rgba(0,0,0,0.1)'
+            : '0 2px 20px rgba(0,0,0,0.05)';
+        navTicking = false;
+    });
+}, { passive: true });
 
 // ========================================
 // Mobile menu
@@ -401,6 +406,12 @@ document.querySelectorAll('input[type="date"][name="preferred_date"]').forEach(f
         strip.classList.toggle('is-visible', show);
         strip.setAttribute('aria-hidden', show ? 'false' : 'true');
     }
-    window.addEventListener('scroll', update, { passive: true });
-    update();
+    var ticking = false;
+    window.addEventListener('scroll', function () {
+        if (ticking) return;
+        ticking = true;
+        requestAnimationFrame(function () { update(); ticking = false; });
+    }, { passive: true });
+    // initial read after first paint, not during load (avoids forced reflow)
+    requestAnimationFrame(function () { requestAnimationFrame(update); });
 })();

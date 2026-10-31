@@ -2,11 +2,12 @@
 <html lang="en">
 <head>
 <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-PJBLDL96');</script>
+<script>
+window.dataLayer=window.dataLayer||[];window.dataLayer.push({'gtm.start':new Date().getTime(),event:'gtm.js'});
+(function(){var loaded=false;function loadGTM(){if(loaded)return;loaded=true;var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtm.js?id=GTM-PJBLDL96';document.head.appendChild(s);}
+['scroll','pointerdown','keydown','touchstart'].forEach(function(ev){addEventListener(ev,loadGTM,{once:true,passive:true});});
+addEventListener('load',function(){setTimeout(loadGTM,4000);});})();
+</script>
 <!-- End Google Tag Manager -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,7 +18,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <meta name="robots" content="index, follow">
     <meta property="og:title" content="BS Appliance Expert Repair | Appliance Repairs Johannesburg">
     <meta property="og:description" content="Fast, reliable fridge, washing machine, oven & appliance repairs in Johannesburg. Same-day service. 6-month warranty. Call +27 83 278 2604.">
-    <meta property="og:image" content="https://www.bsapplianceexpectrepairs.co.za/images/logoPro2.0.png">
+    <meta property="og:image" content="https://www.bsapplianceexpectrepairs.co.za/images/og-image.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:url" content="https://www.bsapplianceexpectrepairs.co.za/">
@@ -28,10 +29,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="BS Appliance Expert Repair | Appliance Repairs Johannesburg">
     <meta name="twitter:description" content="Fast, reliable fridge, washing machine, oven & appliance repairs in Johannesburg. Same-day service. 6-month warranty. Call +27 83 278 2604.">
-    <meta name="twitter:image" content="https://www.bsapplianceexpectrepairs.co.za/images/logoPro2.0.png">
+    <meta name="twitter:image" content="https://www.bsapplianceexpectrepairs.co.za/images/og-image.png">
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96">
-    <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="shortcut icon" href="favicon.ico">
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
     <meta name="apple-mobile-web-app-title" content="BS Appliance">
@@ -40,11 +40,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <!-- Canonical -->
     <link rel="canonical" href="https://www.bsapplianceexpectrepairs.co.za/">
     <!-- Google Font preconnect (ADD above the existing Google Fonts link) -->
+    <link rel="preload" as="image" href="images/hero-washing-machine.webp" fetchpriority="high">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="style.css?v=4">
+    <link rel="stylesheet" href="style.css?v=5">
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"></noscript>
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
@@ -85,7 +87,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 </a>
                 <a href="#contact" class="btn btn-primary">Book Now</a>
             </div>
-            <button class="mobile-menu-btn" id="mobileMenuBtn">
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Open menu" aria-controls="navLinks">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -109,6 +111,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
 
 
+    <main id="main">
     <!-- Hero Section -->
     <section class="hero" id="home">
         <div class="container">
@@ -145,7 +148,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 </div>
             </div>
             <div class="hero-image">
-                <img src="images/hero-washing-machine.png" alt="Washing machine repair expert in Johannesburg" width="450" height="450" fetchpriority="high" >
+                <img src="images/hero-washing-machine.webp" alt="Washing machine repair expert in Johannesburg" width="450" height="450" fetchpriority="high" decoding="async">
                 <div class="floating-card card-1">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
                     <div>
@@ -174,73 +177,73 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <div class="marquee-content">
                 <!-- Samsung badge -->
                 <div class="brand-badge">
-                    <img class="badge-img" src="images/1280px-Samsung_old_logo_before_year_2015.svg.png" alt="Samsung logo sticker" loading="lazy">
+                    <img class="badge-img" src="images/1280px-Samsung_old_logo_before_year_2015.svg.webp" alt="Samsung logo sticker" width="110" height="110" loading="lazy">
                     
                 </div>
                 <!-- LG badge -->
                 <div class="brand-badge">
-                    <img class="badge-img" src="images/LG-Logo.png" alt="LG sticker" loading="lazy">
+                    <img class="badge-img" src="images/LG-Logo.webp" alt="LG sticker" width="110" height="110" loading="lazy">
                     
                 </div>
                 <!-- Dell badge -->
                 <div class="brand-badge">
-                    <img class="badge-img" src="images/960px-Dell_Logo.svg.png" alt="Dell badge" loading="lazy">
+                    <img class="badge-img" src="images/960px-Dell_Logo.svg.webp" alt="Dell badge" width="110" height="110" loading="lazy">
                     
                 </div>
                 <!-- Bosch badge -->
                 <div class="brand-badge">
-                    <img class="badge-img" src="images/Bosch-Logo.png" alt="Bosch logo" loading="lazy">
+                    <img class="badge-img" src="images/Bosch-Logo.webp" alt="Bosch logo" width="110" height="110" loading="lazy">
                     
                 </div>
                 <!-- Whirlpool badge -->
                 <div class="brand-badge">
-                    <img class="badge-img" src="images/1280px-Whirlpool_Corporation_Logo_(as_of_2017).svg.png" alt="Whirlpool sticker" loading="lazy">
+                    <img class="badge-img" src="images/1280px-Whirlpool_Corporation_Logo_(as_of_2017).svg.webp" alt="Whirlpool sticker" width="110" height="110" loading="lazy">
                     
                 </div>
                 <!-- Sony badge -->
                 <div class="brand-badge">
-                    <img class="badge-img" src="images/sony-2-logo-png-transparent.png" alt="Sony badge" loading="lazy">
+                    <img class="badge-img" src="images/sony-2-logo-png-transparent.webp" alt="Sony badge" width="110" height="110" loading="lazy">
                     
                 </div>
                 <!-- Panasonic badge -->
                 <div class="brand-badge">
-                    <img class="badge-img" src="images/download.png" alt="Panasonic logo" loading="lazy">
+                    <img class="badge-img" src="images/download.webp" alt="Panasonic logo" width="110" height="110" loading="lazy">
                     
                 </div>
                 <!-- Philips badge -->
                 <div class="brand-badge">
-                    <img class="badge-img" src="images/philips-logo.png" alt="Philips sticker" loading="lazy">
+                    <img class="badge-img" src="images/philips-logo.webp" alt="Philips sticker" width="110" height="110" loading="lazy">
                     
                 </div>
                  <!-- Siemens -->
                 <div class="brand-badge">
-                    <img class="badge-img" src="images/Siemens-logo.svg.png" alt="Siemens sticker" loading="lazy">
+                    <img class="badge-img" src="images/Siemens-logo.svg.webp" alt="Siemens sticker" width="110" height="110" loading="lazy">
                     
                 </div>
                 <!-- Haier badge -->
                 <div class="brand-badge">
-                    <img class="badge-img" src="images/0x0.png" alt="Haier badge" loading="lazy">
+                    <img class="badge-img" src="images/0x0.webp" alt="Haier badge" width="110" height="110" loading="lazy">
                     
                 </div>
                 <!-- Electrolux badge -->
                 <div class="brand-badge">
-                    <img class="badge-img" src="images/electrolux.png" alt="Electrolux sticker" loading="lazy">
+                    <img class="badge-img" src="images/electrolux.webp" alt="Electrolux sticker" width="110" height="110" loading="lazy">
                     
                 </div>
                  <!-- Defy -->
                 <div class="brand-badge">
-                    <img class="badge-img" src="images/defy-logo-new.png" alt="Defy sticker" loading="lazy">
+                    <img class="badge-img" src="images/defy-logo-new.webp" alt="Defy sticker" width="110" height="110" loading="lazy">
                     
                 </div>
                 
                  <!-- Hisense -->
                 <div class="brand-badge">
-                    <img class="badge-img" src="images/hisense.png" alt="Hisense sticker" loading="lazy">
+                    <img class="badge-img" src="images/hisense.webp" alt="Hisense sticker" width="110" height="110" loading="lazy">
                     
                 </div>
                  <!-- Beko -->
                 <div class="brand-badge">
-                    <img class="badge-img" src="images/New_Beko_logo.svg.png" alt="Beko sticker" loading="lazy">
+                    <img class="badge-img" src="images/New_Beko_logo.svg.webp" alt="Beko sticker" width="110" height="110" loading="lazy">
                     
                 </div>
             </div>
@@ -249,73 +252,73 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <div class="marquee-content" aria-hidden="true">
                <!-- Samsung badge -->
                 <div class="brand-badge">
-                    <img class="badge-img" src="images/1280px-Samsung_old_logo_before_year_2015.svg.png" alt="Samsung logo sticker" loading="lazy">
+                    <img class="badge-img" src="images/1280px-Samsung_old_logo_before_year_2015.svg.webp" alt="Samsung logo sticker" width="110" height="110" loading="lazy">
                     
                 </div>
                 <!-- LG badge -->
                 <div class="brand-badge">
-                    <img class="badge-img" src="images/LG-Logo.png" alt="LG sticker" loading="lazy">
+                    <img class="badge-img" src="images/LG-Logo.webp" alt="LG sticker" width="110" height="110" loading="lazy">
                     
                 </div>
                 <!-- Dell badge -->
                 <div class="brand-badge">
-                    <img class="badge-img" src="images/960px-Dell_Logo.svg.png" alt="Dell badge" loading="lazy">
+                    <img class="badge-img" src="images/960px-Dell_Logo.svg.webp" alt="Dell badge" width="110" height="110" loading="lazy">
                     
                 </div>
                 <!-- Bosch badge -->
                 <div class="brand-badge">
-                    <img class="badge-img" src="images/Bosch-Logo.png" alt="Bosch logo" loading="lazy">
+                    <img class="badge-img" src="images/Bosch-Logo.webp" alt="Bosch logo" width="110" height="110" loading="lazy">
                     
                 </div>
                 <!-- Whirlpool badge -->
                 <div class="brand-badge">
-                    <img class="badge-img" src="images/1280px-Whirlpool_Corporation_Logo_(as_of_2017).svg.png" alt="Whirlpool sticker" loading="lazy">
+                    <img class="badge-img" src="images/1280px-Whirlpool_Corporation_Logo_(as_of_2017).svg.webp" alt="Whirlpool sticker" width="110" height="110" loading="lazy">
                     
                 </div>
                 <!-- Sony badge -->
                 <div class="brand-badge">
-                    <img class="badge-img" src="images/sony-2-logo-png-transparent.png" alt="Sony badge" loading="lazy">
+                    <img class="badge-img" src="images/sony-2-logo-png-transparent.webp" alt="Sony badge" width="110" height="110" loading="lazy">
                     
                 </div>
                 <!-- Panasonic badge -->
                 <div class="brand-badge">
-                    <img class="badge-img" src="images/download.png" alt="Panasonic logo" loading="lazy">
+                    <img class="badge-img" src="images/download.webp" alt="Panasonic logo" width="110" height="110" loading="lazy">
                     
                 </div>
                 <!-- Philips badge -->
                 <div class="brand-badge">
-                    <img class="badge-img" src="images/philips-logo.png" alt="Philips sticker" loading="lazy">
+                    <img class="badge-img" src="images/philips-logo.webp" alt="Philips sticker" width="110" height="110" loading="lazy">
                     
                 </div>
                  <!-- Siemens -->
                 <div class="brand-badge">
-                    <img class="badge-img" src="images/Siemens-logo.svg.png" alt="Siemens sticker" loading="lazy">
+                    <img class="badge-img" src="images/Siemens-logo.svg.webp" alt="Siemens sticker" width="110" height="110" loading="lazy">
                     
                 </div>
                 <!-- Haier badge -->
                 <div class="brand-badge">
-                    <img class="badge-img" src="images/0x0.png" alt="Haier badge" loading="lazy">
+                    <img class="badge-img" src="images/0x0.webp" alt="Haier badge" width="110" height="110" loading="lazy">
                     
                 </div>
                 <!-- Electrolux badge -->
                 <div class="brand-badge">
-                    <img class="badge-img" src="images/electrolux.png" alt="Electrolux sticker" loading="lazy">
+                    <img class="badge-img" src="images/electrolux.webp" alt="Electrolux sticker" width="110" height="110" loading="lazy">
                     
                 </div>
                  <!-- Defy -->
                 <div class="brand-badge">
-                    <img class="badge-img" src="images/defy-logo-new.png" alt="Defy sticker" loading="lazy">
+                    <img class="badge-img" src="images/defy-logo-new.webp" alt="Defy sticker" width="110" height="110" loading="lazy">
                     
                 </div>
                 
                  <!-- Hisense -->
                 <div class="brand-badge">
-                    <img class="badge-img" src="images/hisense.png" alt="Hisense sticker" loading="lazy">
+                    <img class="badge-img" src="images/hisense.webp" alt="Hisense sticker" width="110" height="110" loading="lazy">
                     
                 </div>
                  <!-- Beko -->
                 <div class="brand-badge">
-                    <img class="badge-img" src="images/New_Beko_logo.svg.png" alt="Beko sticker" loading="lazy">
+                    <img class="badge-img" src="images/New_Beko_logo.svg.webp" alt="Beko sticker" width="110" height="110" loading="lazy">
                     
                 </div>
             </div>
@@ -446,12 +449,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
             <!-- card 1 -->
             <div class="image-card">
-                <img class="card-img" src="images/1.jpeg" alt="Samsung top loader" loading="lazy">
+                <img class="card-img" src="images/1.webp" alt="Samsung top loader" width="210" height="230" loading="lazy">
                 <div class="card-label"> Top Loader</div>
             </div>
             <!-- technician after card 1 -->
             <div class="image-card image-card--tech">
-                <img class="card-img" src="images/london.jpg" alt="Technician fixing top loader in Bryanston" loading="lazy">
+                <img class="card-img" src="images/london.webp" alt="Technician fixing top loader in Bryanston" width="210" height="230" loading="lazy">
                 <div class="card-label card-label--tech">
                     <span class="loc">Bryanston</span>
                     <span class="job">Lid Switch Fix</span>
@@ -460,12 +463,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
             <!-- card 2 -->
             <div class="image-card">
-                <img class="card-img" src="images/2019+Winnebago+MINNIE+2606RLvvvv - Copy.webp" alt="Microwave" loading="lazy">
+                <img class="card-img" src="images/2019+Winnebago+MINNIE+2606RLvvvv - Copy.webp" alt="Microwave" width="210" height="230" loading="lazy">
                 <div class="card-label">Microwave Repairs</div>
             </div>
             <!-- technician after card 2 -->
             <div class="image-card image-card--tech">
-                <img class="card-img" src="images/microwave-repair.jpg" alt="Technician fixing microwave in Norwood" loading="lazy">
+                <img class="card-img" src="images/microwave-repair.webp" alt="Technician fixing microwave in Norwood" width="210" height="230" loading="lazy">
                 <div class="card-label card-label--tech">
                     <span class="loc">Norwood</span>
                     <span class="job">Magnetron Replacement</span>
@@ -474,12 +477,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
             <!-- card 3 -->
             <div class="image-card">
-                <img class="card-img" src="images/1700634_1.JPG" alt="Fridge" loading="lazy">
+                <img class="card-img" src="images/1700634_1.webp" alt="Fridge" width="210" height="230" loading="lazy">
                 <div class="card-label">Fridge Repairs</div>
             </div>
             <!-- technician after card 3 -->
             <div class="image-card image-card--tech">
-                <img class="card-img" src="images/Fridge-fixing-768x1024.jpeg" alt="Technician fixing fridge in Sandton" loading="lazy">
+                <img class="card-img" src="images/Fridge-fixing-768x1024.webp" alt="Technician fixing fridge in Sandton" width="210" height="230" loading="lazy">
                 <div class="card-label card-label--tech">
                     <span class="loc">Sandton</span>
                     <span class="job">Compressor Replacement</span>
@@ -488,12 +491,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
             <!-- card 4 -->
             <div class="image-card">
-                <img class="card-img" src="images/4.jpeg" alt="Samsung Washing machine" loading="lazy">
+                <img class="card-img" src="images/new.webp" alt="Samsung Washing machine" width="210" height="230" loading="lazy">
                 <div class="card-label">Washing Machine</div>
             </div>
             <!-- technician after card 4 -->
             <div class="image-card image-card--tech">
-                <img class="card-img" src="images/tech-washing-machine.jpg" alt="Technician fixing washing machine in Rosebank" loading="lazy">
+                <img class="card-img" src="images/tech-washing-machine.webp" alt="Technician fixing washing machine in Rosebank" width="210" height="230" loading="lazy">
                 <div class="card-label card-label--tech">
                     <span class="loc">Rosebank</span>
                     <span class="job">Washing Machine Repair</span>
@@ -502,12 +505,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
             <!-- card 5 -->
             <div class="image-card">
-                <img class="card-img" src="images/dryer2.jpg" alt="Dryer" loading="lazy">
+                <img class="card-img" src="images/dryer2.webp" alt="Dryer" width="210" height="230" loading="lazy">
                 <div class="card-label">Dryer repairs</div>
             </div>
             <!-- technician after card 5 -->
             <div class="image-card image-card--tech">
-                <img class="card-img" src="images/fabrice.jpg" alt="Technician fixing dryer in Randburg" loading="lazy">
+                <img class="card-img" src="images/fabrice.webp" alt="Technician fixing dryer in Randburg" width="210" height="230" loading="lazy">
                 <div class="card-label card-label--tech">
                     <span class="loc">Randburg</span>
                     <span class="job">Drain Pump Replacement</span>
@@ -516,12 +519,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
             <!-- card 6 -->
             <div class="image-card">
-                <img class="card-img" src="images/6.jpeg" alt="LG Air Conditioner" loading="lazy">
+                <img class="card-img" src="images/6.webp" alt="LG Air Conditioner" width="210" height="230" loading="lazy">
                 <div class="card-label">AC repairs</div>
             </div>
             <!-- technician after card 6 -->
             <div class="image-card image-card--tech">
-                <img class="card-img" src="images/acr.jpg" alt="Technician fixing AC in Fourways" loading="lazy">
+                <img class="card-img" src="images/acr.webp" alt="Technician fixing AC in Fourways" width="210" height="230" loading="lazy">
                 <div class="card-label card-label--tech">
                     <span class="loc">Fourways</span>
                     <span class="job">AC · PCB Replacement</span>
@@ -530,12 +533,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
             <!-- card 7 -->
             <div class="image-card">
-                <img class="card-img" src="images/stove-2___13133653149.png" alt="Stove" loading="lazy">
+                <img class="card-img" src="images/stove-2___13133653149.webp" alt="Stove" width="210" height="230" loading="lazy">
                 <div class="card-label">Stove Repairs</div>
             </div>
             <!-- technician after card 7 -->
             <div class="image-card image-card--tech">
-                <img class="card-img" src="images/Defy-stove-top-fix-1.jpg" alt="Technician fixing stove in Greenside" loading="lazy">
+                <img class="card-img" src="images/Defy-stove-top-fix-1.webp" alt="Technician fixing stove in Greenside" width="210" height="230" loading="lazy">
                 <div class="card-label card-label--tech">
                     <span class="loc">Greenside</span>
                     <span class="job">Stove · Element Replacement</span>
@@ -544,12 +547,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
             <!-- card 8 -->
             <div class="image-card">
-                <img class="card-img" src="images/commercial.webp" alt="Commercial Fridge" loading="lazy">
+                <img class="card-img" src="images/commercial.webp" alt="Commercial Fridge" width="210" height="230" loading="lazy">
                 <div class="card-label">Commercial Fridge Repair</div>
             </div>
             <!-- technician after card 8 -->
             <div class="image-card image-card--tech">
-                <img class="card-img" src="images/subzero-wine-cooler-repair-process-scaled.jpg" alt="Technician fixing commercial fridge in Midrand" loading="lazy">
+                <img class="card-img" src="images/subzero-wine-cooler-repair-process-scaled.webp" alt="Technician fixing commercial fridge in Midrand" width="210" height="230" loading="lazy">
                 <div class="card-label card-label--tech">
                     <span class="loc">Midrand</span>
                     <span class="job">Wine Cooler Fix</span>
@@ -558,12 +561,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
             <!-- card 9 -->
             <div class="image-card">
-                <img class="card-img" src="images/washer.jpg" alt="Dishwasher" loading="lazy">
+                <img class="card-img" src="images/washer.webp" alt="Dishwasher" width="210" height="230" loading="lazy">
                 <div class="card-label">Dishwasher Repairs</div>
             </div>
             <!-- technician after card 9 -->
             <div class="image-card image-card--tech">
-                <img class="card-img" src="images/dishguy.jpg" alt="Technician fixing dishwasher in Melville" loading="lazy">
+                <img class="card-img" src="images/dishguy.webp" alt="Technician fixing dishwasher in Melville" width="210" height="230" loading="lazy">
                 <div class="card-label card-label--tech">
                     <span class="loc">Melville</span>
                     <span class="job">Spray Arm Repair</span>
@@ -572,12 +575,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
             <!-- card 10 -->
             <div class="image-card">
-                <img class="card-img" src="images/oven.jpg" alt="Oven" loading="lazy">
+                <img class="card-img" src="images/oven.webp" alt="Oven" width="210" height="230" loading="lazy">
                 <div class="card-label"> Oven Repairs </div>
             </div>
             <!-- technician after card 10 -->
             <div class="image-card image-card--tech">
-                <img class="card-img" src="images/IMG-3730.jpg" alt="Technician fixing oven in Parkhurst" loading="lazy">
+                <img class="card-img" src="images/IMG-3730.webp" alt="Technician fixing oven in Parkhurst" width="210" height="230" loading="lazy">
                 <div class="card-label card-label--tech">
                     <span class="loc">Parkhurst</span>
                     <span class="job">Oven Thermostat Replacement</span>
@@ -586,12 +589,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
             <!-- card 11 -->
             <div class="image-card">
-                <img class="card-img" src="images/Induction_Stove.jpg" alt="Induction stove" loading="lazy">
+                <img class="card-img" src="images/Induction_Stove.webp" alt="Induction stove" width="210" height="230" loading="lazy">
                 <div class="card-label">Induction Stove Repairs</div>
             </div>
             <!-- technician after card 11 -->
             <div class="image-card image-card--tech">
-                <img class="card-img" src="images/stoverepire.png" alt="Technician fixing induction stove in Kensington" loading="lazy">
+                <img class="card-img" src="images/stoverepire.webp" alt="Technician fixing induction stove in Kensington" width="210" height="230" loading="lazy">
                 <div class="card-label card-label--tech">
                     <span class="loc">Kensington</span>
                     <span class="job">Control Board Repair</span>
@@ -605,11 +608,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
             <!-- card 1 -->
             <div class="image-card">
-                <img class="card-img" src="images/1.jpeg" alt="Samsung top loader" loading="lazy">
+                <img class="card-img" src="images/1.webp" alt="Samsung top loader" width="210" height="230" loading="lazy">
                 <div class="card-label"> Top Loader</div>
             </div>
             <div class="image-card image-card--tech">
-                <img class="card-img" src="images/london.jpg" alt="Technician fixing top loader in Bryanston" loading="lazy">
+                <img class="card-img" src="images/london.webp" alt="Technician fixing top loader in Bryanston" width="210" height="230" loading="lazy">
                 <div class="card-label card-label--tech">
                     <span class="loc">Bryanston</span>
                     <span class="job">Lid Switch Fix</span>
@@ -618,11 +621,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
             <!-- card 2 -->
             <div class="image-card">
-                <img class="card-img" src="images/2019+Winnebago+MINNIE+2606RLvvvv - Copy.webp" alt="Microwave" loading="lazy">
+                <img class="card-img" src="images/2019+Winnebago+MINNIE+2606RLvvvv - Copy.webp" alt="Microwave" width="210" height="230" loading="lazy">
                 <div class="card-label">Microwave Repairs</div>
             </div>
             <div class="image-card image-card--tech">
-                <img class="card-img" src="images/microwave-repair.jpg" alt="Technician fixing microwave in Norwood" loading="lazy">
+                <img class="card-img" src="images/microwave-repair.webp" alt="Technician fixing microwave in Norwood" width="210" height="230" loading="lazy">
                 <div class="card-label card-label--tech">
                     <span class="loc">Norwood</span>
                     <span class="job">Magnetron Replacement</span>
@@ -631,11 +634,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
             <!-- card 3 -->
             <div class="image-card">
-                <img class="card-img" src="images/1700634_1.JPG" alt="Fridge" loading="lazy">
+                <img class="card-img" src="images/1700634_1.webp" alt="Fridge" width="210" height="230" loading="lazy">
                 <div class="card-label">Fridge Repairs</div>
             </div>
             <div class="image-card image-card--tech">
-                <img class="card-img" src="images/Fridge-fixing-768x1024.jpeg" alt="Technician fixing fridge in Sandton" loading="lazy">
+                <img class="card-img" src="images/Fridge-fixing-768x1024.webp" alt="Technician fixing fridge in Sandton" width="210" height="230" loading="lazy">
                 <div class="card-label card-label--tech">
                     <span class="loc">Sandton</span>
                     <span class="job">Compressor Replacement</span>
@@ -644,11 +647,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
             <!-- card 4 -->
             <div class="image-card">
-                <img class="card-img" src="images/4.jpeg" alt="Samsung Washing machine" loading="lazy">
+                <img class="card-img" src="images/new.webp" alt="Samsung Washing machine" width="210" height="230" loading="lazy">
                 <div class="card-label">Washing Machine</div>
             </div>
             <div class="image-card image-card--tech">
-                <img class="card-img" src="images/tech-washing-machine.jpg" alt="Technician fixing washing machine in Rosebank" loading="lazy">
+                <img class="card-img" src="images/tech-washing-machine.webp" alt="Technician fixing washing machine in Rosebank" width="210" height="230" loading="lazy">
                 <div class="card-label card-label--tech">
                     <span class="loc">Rosebank</span>
                     <span class="job">Washing Machine Repair</span>
@@ -657,11 +660,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
             <!-- card 5 -->
             <div class="image-card">
-                <img class="card-img" src="images/dryer2.jpg" alt="Dryer" loading="lazy">
+                <img class="card-img" src="images/dryer2.webp" alt="Dryer" width="210" height="230" loading="lazy">
                 <div class="card-label">Dryer repairs</div>
             </div>
             <div class="image-card image-card--tech">
-                <img class="card-img" src="images/fabrice.jpg" alt="Technician fixing dryer in Randburg" loading="lazy">
+                <img class="card-img" src="images/fabrice.webp" alt="Technician fixing dryer in Randburg" width="210" height="230" loading="lazy">
                 <div class="card-label card-label--tech">
                     <span class="loc">Randburg</span>
                     <span class="job">Drain Pump Replacement</span>
@@ -670,11 +673,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
             <!-- card 6 -->
             <div class="image-card">
-                <img class="card-img" src="images/6.jpeg" alt="LG Air Conditioner" loading="lazy">
+                <img class="card-img" src="images/6.webp" alt="LG Air Conditioner" width="210" height="230" loading="lazy">
                 <div class="card-label">External AC</div>
             </div>
             <div class="image-card image-card--tech">
-                <img class="card-img" src="images/acr.jpg" alt="Technician fixing AC in Fourways" loading="lazy">
+                <img class="card-img" src="images/acr.webp" alt="Technician fixing AC in Fourways" width="210" height="230" loading="lazy">
                 <div class="card-label card-label--tech">
                     <span class="loc">Fourways</span>
                     <span class="job">AC · PCB Replacement</span>
@@ -683,11 +686,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
             <!-- card 7 -->
             <div class="image-card">
-                <img class="card-img" src="images/stove-2___13133653149.png" alt="Stove" loading="lazy">
+                <img class="card-img" src="images/stove-2___13133653149.webp" alt="Stove" width="210" height="230" loading="lazy">
                 <div class="card-label">Stove Repairs</div>
             </div>
             <div class="image-card image-card--tech">
-                <img class="card-img" src="images/Defy-stove-top-fix-1.jpg" alt="Technician fixing stove in Greenside" loading="lazy">
+                <img class="card-img" src="images/Defy-stove-top-fix-1.webp" alt="Technician fixing stove in Greenside" width="210" height="230" loading="lazy">
                 <div class="card-label card-label--tech">
                     <span class="loc">Greenside</span>
                     <span class="job">Stove · Element Replacement</span>
@@ -696,11 +699,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
             <!-- card 8 -->
             <div class="image-card">
-                <img class="card-img" src="images/commercial.webp" alt="Commercial Fridge" loading="lazy">
+                <img class="card-img" src="images/commercial.webp" alt="Commercial Fridge" width="210" height="230" loading="lazy">
                 <div class="card-label">Commercial Fridge Repair</div>
             </div>
             <div class="image-card image-card--tech">
-                <img class="card-img" src="images/subzero-wine-cooler-repair-process-scaled.jpg" alt="Technician fixing commercial fridge in Midrand" loading="lazy">
+                <img class="card-img" src="images/subzero-wine-cooler-repair-process-scaled.webp" alt="Technician fixing commercial fridge in Midrand" width="210" height="230" loading="lazy">
                 <div class="card-label card-label--tech">
                     <span class="loc">Midrand</span>
                     <span class="job">Wine Cooler Fix</span>
@@ -709,11 +712,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
             <!-- card 9 -->
             <div class="image-card">
-                <img class="card-img" src="images/washer.jpg" alt="Dishwasher" loading="lazy">
+                <img class="card-img" src="images/washer.webp" alt="Dishwasher" width="210" height="230" loading="lazy">
                 <div class="card-label">Dishwasher Repairs</div>
             </div>
             <div class="image-card image-card--tech">
-                <img class="card-img" src="images/dishguy.jpg" alt="Technician fixing dishwasher in Melville" loading="lazy">
+                <img class="card-img" src="images/dishguy.webp" alt="Technician fixing dishwasher in Melville" width="210" height="230" loading="lazy">
                 <div class="card-label card-label--tech">
                     <span class="loc">Melville</span>
                     <span class="job">Spray Arm Repair</span>
@@ -722,11 +725,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
             <!-- card 10 -->
             <div class="image-card">
-                <img class="card-img" src="images/oven.jpg" alt="Oven" loading="lazy">
+                <img class="card-img" src="images/oven.webp" alt="Oven" width="210" height="230" loading="lazy">
                 <div class="card-label"> Oven Repairs </div>
             </div>
             <div class="image-card image-card--tech">
-                <img class="card-img" src="images/IMG-3730.jpg" alt="Technician fixing oven in Parkhurst" loading="lazy">
+                <img class="card-img" src="images/IMG-3730.webp" alt="Technician fixing oven in Parkhurst" width="210" height="230" loading="lazy">
                 <div class="card-label card-label--tech">
                     <span class="loc">Parkhurst</span>
                     <span class="job">Oven Thermostat Replacement</span>
@@ -735,11 +738,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
             <!-- card 11 -->
             <div class="image-card">
-                <img class="card-img" src="images/Induction_Stove.jpg" alt="Induction stove" loading="lazy">
+                <img class="card-img" src="images/Induction_Stove.webp" alt="Induction stove" width="210" height="230" loading="lazy">
                 <div class="card-label">Induction Stove Repairs</div>
             </div>
             <div class="image-card image-card--tech">
-                <img class="card-img" src="images/stoverepire.png" alt="Technician fixing induction stove in Kensington" loading="lazy">
+                <img class="card-img" src="images/stoverepire.webp" alt="Technician fixing induction stove in Kensington" width="210" height="230" loading="lazy">
                 <div class="card-label card-label--tech">
                     <span class="loc">Kensington</span>
                     <span class="job">Control Board Repair</span>
@@ -762,7 +765,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <div class="about-grid">
                 
                 <div class="about-image">
-                    <img src="images/refrigerator-not-cooling-fix.png" alt="BS Appliance Expert Repair technician in Johannesburg" width="540" height="540" loading="lazy">
+                    <img src="images/refrigerator-not-cooling-fix.webp" alt="BS Appliance Expert Repair technician in Johannesburg" width="540" height="540" loading="lazy">
                     <div class="experience-badge">
                         <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
                         <div>
@@ -959,7 +962,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
 </section>
 <!-- FAQ Section -->
-<section class="faq-section" style="background-image: url('images/faq2.jpg');">
+<section class="faq-section" style="background-image: url('images/faq2.webp');">
     <div class="faq-overlay"></div>
     <div class="container faq-content">
         <div class="section-header light">
@@ -1059,6 +1062,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     </div>
                    <div class="map-placeholder" style="position: relative; overflow: hidden; min-height: 250px; border-radius: var(--radius-lg);">
                     <iframe 
+                        title="Map showing BS Appliance Expert Repair location in Johannesburg"
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3578.413285173378!2d28.06884427462892!3d-26.248246965767773!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e950fa5e071c9f7%3A0x664df406e5b64a8d!2s18%20Hain%20Rd%2C%20The%20Hill%2C%20Johannesburg%20South%2C%202197!5e0!3m2!1sen!2sza!4v1776027906129!5m2!1sen!2sza" 
                         width="100%" 
                         height="100%" 
@@ -1074,24 +1078,24 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <form class="contact-form" id="contactForm" name="contactForm" method="POST" action="/thank-you" data-netlify="true" netlify-honeypot="bot-field" netlify>
                         <!-- Netlify hidden fields -->
                         <input type="hidden" name="form-name" value="contactForm">
-                        <p class="hidden" style="display:none"><label>Don't fill this out: <input name="bot-field"></label></p>
+                        <p class="hidden" style="display:none"><label>Don't fill this out: <input name="bot-field" autocomplete="off" tabindex="-1"></label></p>
                         <div class="form-row">
                             <div class="form-group">
                                 <label for="name">Full Name</label>
-                                <input type="text" id="name" name="name" placeholder="Thabo Mokoena" required>
+                                <input type="text" id="name" name="name" autocomplete="name" placeholder="Thabo Mokoena" required>
                             </div>
                             <div class="form-group">
                                 <label for="phone">Phone Number</label>
-                                <input type="tel" id="phone" name="phone" placeholder=" Cell" required>
+                                <input type="tel" id="phone" name="phone" autocomplete="tel" placeholder=" Cell" required>
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="email">Email Address</label>
-                            <input type="email" id="email" name="email" placeholder="Email" required>
+                            <input type="email" id="email" name="email" autocomplete="email" placeholder="Email" required>
                         </div>
                         <div class="form-group">
                             <label for="appliance">Appliance Type</label>
-                            <select id="appliance" name="appliance" style="width:100%;padding:14px 16px;border:2px solid #e5e5e5;border-radius:12px;font-size:15px;font-family:inherit;background:#fff;transition:border-color 0.3s ease;" required>
+                            <select id="appliance" name="appliance" autocomplete="off" style="width:100%;padding:14px 16px;border:2px solid #e5e5e5;border-radius:12px;font-size:15px;font-family:inherit;background:#fff;transition:border-color 0.3s ease;" required>
                                 <option value="" disabled selected>Select your appliance…</option>
                                 <option>Refrigerator / Fridge</option>
                                 <option>Washing Machine</option>
@@ -1111,7 +1115,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         <div class="form-row">
                             <div class="form-group">
                                 <label for="contact-reply">How should we get back to you?</label>
-                                <select id="contact-reply" name="reply_preference" required>
+                                <select id="contact-reply" name="reply_preference" autocomplete="off" required>
                                     <option value="" disabled selected>Please select…</option>
                                     <option>WhatsApp</option>
                                     <option>Phone call</option>
@@ -1120,13 +1124,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             </div>
                             <div class="form-group">
                                 <label for="contact-date">Preferred visit date <span class="form-optional">(optional)</span></label>
-                                <input type="date" id="contact-date" name="preferred_date">
+                                <input type="date" id="contact-date" name="preferred_date" autocomplete="off">
                                 <small class="form-hint">Leave blank if you only want a quote.</small>
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="message">Describe the Problem</label>
-                            <textarea id="message" name="message" rows="4" placeholder="Tell us about your appliance issue..." required></textarea>
+                            <textarea id="message" name="message" autocomplete="off" rows="4" placeholder="Tell us about your appliance issue..." required></textarea>
                         </div>
                         <button type="submit" class="btn btn-primary btn-large btn-full">
                             Send Message
@@ -1140,6 +1144,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </section>
 
     
+    </main>
+
   <!-- Footer -->
 <footer class="footer">
     <div class="container">
@@ -1331,7 +1337,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
   "name": "BS Appliance Expert Repair",
-  "image": "https://www.bsapplianceexpectrepairs.co.za/images/logoPro2.0.png",
+  "image": "https://www.bsapplianceexpectrepairs.co.za/images/3_1.png",
   "description": "Fast, reliable appliance repairs in Johannesburg. Fridge, washing machine, oven, dishwasher & AC repairs. Same-day service. R350 call-out fee waived on repair. 6-month warranty.",
   "address": {
     "@type": "PostalAddress",

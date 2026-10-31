@@ -2,11 +2,12 @@
 <html lang="en">
 <head>
 <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-PJBLDL96');</script>
+<script>
+window.dataLayer=window.dataLayer||[];window.dataLayer.push({'gtm.start':new Date().getTime(),event:'gtm.js'});
+(function(){var loaded=false;function loadGTM(){if(loaded)return;loaded=true;var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtm.js?id=GTM-PJBLDL96';document.head.appendChild(s);}
+['scroll','pointerdown','keydown','touchstart'].forEach(function(ev){addEventListener(ev,loadGTM,{once:true,passive:true});});
+addEventListener('load',function(){setTimeout(loadGTM,4000);});})();
+</script>
 <!-- End Google Tag Manager -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,7 +18,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <meta name="robots" content="index, follow">
     <meta property="og:title" content="Privacy Policy & POPIA Compliance | BS Appliance Expert Repair">
     <meta property="og:description" content="BS Appliance Expert Repair's privacy policy and POPIA compliance notice for South African customers.">
-    <meta property="og:image" content="https://www.bsapplianceexpectrepairs.co.za/images/logoPro2.0.png">
+    <meta property="og:image" content="https://www.bsapplianceexpectrepairs.co.za/images/og-image.png">
     <meta property="og:url" content="https://www.bsapplianceexpectrepairs.co.za/privacy-policy">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="BS Appliance Expert Repair">
@@ -28,7 +29,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <meta name="twitter:description" content="POPIA-compliant privacy policy for BS Appliance Expert Repair, Johannesburg.">
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96">
-    <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="shortcut icon" href="favicon.ico">
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
     <meta name="apple-mobile-web-app-title" content="BS Appliance">
@@ -38,7 +38,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="canonical" href="https://www.bsapplianceexpectrepairs.co.za/privacy-policy">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"></noscript>
     <style>
         * {
             margin: 0;
@@ -754,7 +755,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 </a>
                 <a href="/#contact" class="btn btn-primary">Book Now</a>
             </div>
-            <button class="mobile-menu-btn" id="mobileMenuBtn">
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Open menu" aria-controls="navLinks">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -777,6 +778,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
 
 
+<main id="main">
 <div class="privacy-container">
     <div class="privacy-card">
         <div class="privacy-header">
@@ -874,19 +876,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 
                 <!-- Hidden Form for Email Submission -->
                 <form id="consentForm" action="https://formspree.io/f/mvgkqnwd" method="POST" style="display:none;">
-                    <input type="text" name="consent_date" id="consentDate">
-                    <input type="text" name="user_ip" id="userIp">
-                    <input type="text" name="user_agent" id="userAgent">
-                    <input type="text" name="consent_data_collection" id="consent1Val">
-                    <input type="text" name="consent_contact" id="consent2Val">
-                    <input type="text" name="consent_retention" id="consent3Val">
-                    <input type="text" name="consent_acknowledgment" id="consent4Val">
-                    <input type="text" name="_subject" value="POPIA Consent Received - BS Appliance Expert Repair">
+                    <input type="text" name="consent_date" id="consentDate" autocomplete="off">
+                    <input type="text" name="user_ip" id="userIp" autocomplete="off">
+                    <input type="text" name="user_agent" id="userAgent" autocomplete="off">
+                    <input type="text" name="consent_data_collection" id="consent1Val" autocomplete="off">
+                    <input type="text" name="consent_contact" id="consent2Val" autocomplete="off">
+                    <input type="text" name="consent_retention" id="consent3Val" autocomplete="off">
+                    <input type="text" name="consent_acknowledgment" id="consent4Val" autocomplete="off">
+                    <input type="text" name="_subject" value="POPIA Consent Received - BS Appliance Expert Repair" autocomplete="off">
                 </form>
 
                 <!-- Consent Item 1 -->
                 <div class="consent-item">
-                    <input type="checkbox" id="consent1">
+                    <input type="checkbox" id="consent1" autocomplete="off">
                     <label for="consent1">
                         I consent to BS Appliance Expert Repair collecting and storing my personal information for the purpose of providing appliance repair services.
                         <small>This includes name, phone number, email, and service address.</small>
@@ -895,7 +897,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
                 <!-- Consent Item 2 -->
                 <div class="consent-item">
-                    <input type="checkbox" id="consent2">
+                    <input type="checkbox" id="consent2" autocomplete="off">
                     <label for="consent2">
                         I consent to being contacted via phone, SMS, or WhatsApp regarding my repair request and service updates.
                         <small>You can opt out at any time by replying STOP.</small>
@@ -904,7 +906,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
                 <!-- Consent Item 3 -->
                 <div class="consent-item">
-                    <input type="checkbox" id="consent3">
+                    <input type="checkbox" id="consent3" autocomplete="off">
                     <label for="consent3">
                         I consent to my information being retained for up to 3 years for service records and warranty purposes.
                         <small>You may request deletion at any time.</small>
@@ -913,7 +915,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
                 <!-- Consent Item 4 -->
                 <div class="consent-item">
-                    <input type="checkbox" id="consent4">
+                    <input type="checkbox" id="consent4" autocomplete="off">
                     <label for="consent4">
                         I confirm that I have read and understood this Privacy Policy and my rights under POPIA.
                         <small>You can request access to your data at any time.</small>
@@ -958,6 +960,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <a href="/">← Back to Homepage</a>
     </div>
 </div>
+</main>
 
 <script>
     // Get DOM elements
